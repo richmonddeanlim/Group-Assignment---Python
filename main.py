@@ -20,8 +20,6 @@ try:
             except ValueError:
                 print("Pls Input an Interger")
 
-            
-
         if function_choice == 1:
             # copy paste the main here
             pass 
