@@ -155,7 +155,7 @@ def fee_record():
                         # Adding new file in the last text file
                         with open(path, "a") as file:
                             # Write the list to the txt file
-                            file.write(",".join(map(str,fee_data)))
+                            file.write(",".join(map(str,fee_data)).strip())
                             file.write("\n")
 
                         input("\nPress enter to continue (ctrl + c to stop)\n")
