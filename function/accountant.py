@@ -124,7 +124,7 @@ def fee_record():
                         while True:
                             student_id = input("Input student id (TPxxxxxx): ")
                             # Validating input
-                            if "TP" or "Tp" or "tp" in student_id:
+                            if ("TP" or "Tp" or "tp" in student_id) and len(student_id) == 8:
                                 break
                             else:
                                 print("Pls try again")
