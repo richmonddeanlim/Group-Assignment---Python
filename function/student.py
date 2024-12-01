@@ -32,5 +32,6 @@ def menu():
         return False
     
 # For View Avaible module for student
-def view_module():
-    pass
+def view_module(path):
+    with open(path,'r') as file:
+        pass
