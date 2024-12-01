@@ -1,0 +1,3 @@
+DTGIN,Digital Thinking,14
+SSCC,System Software and Computing Concepts,16
+CC2,Co Curriculum,12

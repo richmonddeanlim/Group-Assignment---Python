@@ -82,6 +82,7 @@ try:
                     print("\n\nExiting")
         
         elif function_choice == 6:
+            print("\nExiting the program")
             break
 
         else:

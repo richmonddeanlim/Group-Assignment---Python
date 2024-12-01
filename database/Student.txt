@@ -1,0 +1,4 @@
+tp000001,Aayan,CS,CC2,SSCC
+tp000002,Aayan,CS
+tp000003,aAYAN,AENDFKIAFN
+tp000099,Aayan,Business
