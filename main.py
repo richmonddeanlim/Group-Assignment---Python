@@ -1,4 +1,5 @@
 from function import accountant
+from function import student
 
 try:
     while True:

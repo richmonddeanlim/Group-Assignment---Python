@@ -1,0 +1,304 @@
+1,Olivia Davis,Introduction to Database,54
+1,Olivia Davis,Digital Thinking and Innovation,56
+1,Olivia Davis,Bahasa Melayu Komunikasi,97
+2,Bob Morgan,Python Programming,75
+2,Bob Morgan,Introduction to Networking,56
+2,Bob Morgan,System Software and Computing Concepts,54
+3,Rachel Thomas,Introduction to Database,71
+3,Rachel Thomas,Digital Thinking and Innovation,62
+3,Rachel Thomas,Bahasa Melayu Komunikasi,77
+4,Oliver Lopez,Python Programming,81
+4,Oliver Lopez,Introduction to Networking,52
+4,Oliver Lopez,System Software and Computing Concepts,88
+5,Vincent Martinez,Introduction to Database,100
+5,Vincent Martinez,Digital Thinking and Innovation,72
+5,Vincent Martinez,Bahasa Melayu Komunikasi,96
+6,Rebecca Morgan,Python Programming,72
+6,Rebecca Morgan,Introduction to Networking,66
+6,Rebecca Morgan,System Software and Computing Concepts,65
+7,Isabel Garcia,Introduction to Database,65
+7,Isabel Garcia,Digital Thinking and Innovation,57
+7,Isabel Garcia,Bahasa Melayu Komunikasi,94
+8,Liam Adams,Python Programming,91
+8,Liam Adams,Introduction to Networking,88
+8,Liam Adams,System Software and Computing Concepts,98
+9,Charlie Johnson,Introduction to Database,64
+9,Charlie Johnson,Digital Thinking and Innovation,64
+9,Charlie Johnson,Bahasa Melayu Komunikasi,51
+10,Fiona Taylor,Python Programming,52
+10,Fiona Taylor,Introduction to Networking,99
+10,Fiona Taylor,System Software and Computing Concepts,88
+11,Oliver Perez,Introduction to Database,63
+11,Oliver Perez,Digital Thinking and Innovation,52
+11,Oliver Perez,Bahasa Melayu Komunikasi,92
+12,Mia Johnson,Python Programming,95
+12,Mia Johnson,Introduction to Networking,71
+12,Mia Johnson,System Software and Computing Concepts,71
+13,Jack Moore,Introduction to Database,91
+13,Jack Moore,Digital Thinking and Innovation,66
+13,Jack Moore,Bahasa Melayu Komunikasi,98
+14,Tanya Stewart,Python Programming,53
+14,Tanya Stewart,Introduction to Networking,57
+14,Tanya Stewart,System Software and Computing Concepts,70
+15,Samuel Turner,Introduction to Database,73
+15,Samuel Turner,Digital Thinking and Innovation,86
+15,Samuel Turner,Bahasa Melayu Komunikasi,72
+16,Amber Anderson,Python Programming,87
+16,Amber Anderson,Introduction to Networking,66
+16,Amber Anderson,System Software and Computing Concepts,79
+17,Catherine Parker,Introduction to Database,78
+17,Catherine Parker,Digital Thinking and Innovation,57
+17,Catherine Parker,Bahasa Melayu Komunikasi,62
+18,Rachel Rivera,Python Programming,99
+18,Rachel Rivera,Introduction to Networking,71
+18,Rachel Rivera,System Software and Computing Concepts,91
+19,Alice Bell,Introduction to Database,65
+19,Alice Bell,Digital Thinking and Innovation,80
+19,Alice Bell,Bahasa Melayu Komunikasi,97
+20,Zachary Miller,Python Programming,98
+20,Zachary Miller,Introduction to Networking,93
+20,Zachary Miller,System Software and Computing Concepts,58
+21,Samuel Adams,Introduction to Database,56
+21,Samuel Adams,Digital Thinking and Innovation,99
+21,Samuel Adams,Bahasa Melayu Komunikasi,91
+22,Victor White,Python Programming,78
+22,Victor White,Introduction to Networking,75
+22,Victor White,System Software and Computing Concepts,72
+23,Julia Taylor,Introduction to Database,85
+23,Julia Taylor,Digital Thinking and Innovation,70
+23,Julia Taylor,Bahasa Melayu Komunikasi,81
+24,Willow Young,Python Programming,65
+24,Willow Young,Introduction to Networking,84
+24,Willow Young,System Software and Computing Concepts,100
+25,George Garcia,Introduction to Database,95
+25,George Garcia,Digital Thinking and Innovation,79
+25,George Garcia,Bahasa Melayu Komunikasi,66
+26,Yara Martinez,Python Programming,79
+26,Yara Martinez,Introduction to Networking,92
+26,Yara Martinez,System Software and Computing Concepts,65
+27,Wendy Allen,Introduction to Database,72
+27,Wendy Allen,Digital Thinking and Innovation,67
+27,Wendy Allen,Bahasa Melayu Komunikasi,60
+28,Mia Jackson,Python Programming,100
+28,Mia Jackson,Introduction to Networking,97
+28,Mia Jackson,System Software and Computing Concepts,67
+29,Zachary Williams,Introduction to Database,56
+29,Zachary Williams,Digital Thinking and Innovation,58
+29,Zachary Williams,Bahasa Melayu Komunikasi,97
+30,Ursula Hill,Python Programming,58
+30,Ursula Hill,Introduction to Networking,87
+30,Ursula Hill,System Software and Computing Concepts,85
+31,Isabel Davis,Introduction to Database,86
+31,Isabel Davis,Digital Thinking and Innovation,67
+31,Isabel Davis,Bahasa Melayu Komunikasi,56
+32,Yara Garcia,Python Programming,78
+32,Yara Garcia,Introduction to Networking,97
+32,Yara Garcia,System Software and Computing Concepts,90
+33,Jack Harris,Introduction to Database,85
+33,Jack Harris,Digital Thinking and Innovation,74
+33,Jack Harris,Bahasa Melayu Komunikasi,55
+34,Olivia Edwards,Python Programming,83
+34,Olivia Edwards,Introduction to Networking,66
+34,Olivia Edwards,System Software and Computing Concepts,54
+35,Xander Campbell,Introduction to Database,68
+35,Xander Campbell,Digital Thinking and Innovation,85
+35,Xander Campbell,Bahasa Melayu Komunikasi,55
+36,Michael Reed,Python Programming,99
+36,Michael Reed,Introduction to Networking,61
+36,Michael Reed,System Software and Computing Concepts,71
+37,Edward Williams,Introduction to Database,100
+37,Edward Williams,Digital Thinking and Innovation,80
+37,Edward Williams,Bahasa Melayu Komunikasi,62
+38,Quinn Anderson,Python Programming,99
+38,Quinn Anderson,Introduction to Networking,69
+38,Quinn Anderson,System Software and Computing Concepts,55
+39,Xavier Harris,Introduction to Database,80
+39,Xavier Harris,Digital Thinking and Innovation,66
+39,Xavier Harris,Bahasa Melayu Komunikasi,77
+40,Fiona Anderson,Python Programming,94
+40,Fiona Anderson,Introduction to Networking,76
+40,Fiona Anderson,System Software and Computing Concepts,61
+41,George Scott,Introduction to Database,55
+41,George Scott,Digital Thinking and Innovation,83
+41,George Scott,Bahasa Melayu Komunikasi,57
+42,Rachel Hill,Python Programming,70
+42,Rachel Hill,Introduction to Networking,63
+42,Rachel Hill,System Software and Computing Concepts,59
+43,Olivia King,Introduction to Database,51
+43,Olivia King,Digital Thinking and Innovation,50
+43,Olivia King,Bahasa Melayu Komunikasi,94
+44,Kevin King,Python Programming,56
+44,Kevin King,Introduction to Networking,91
+44,Kevin King,System Software and Computing Concepts,74
+45,Wendy Taylor,Introduction to Database,56
+45,Wendy Taylor,Digital Thinking and Innovation,79
+45,Wendy Taylor,Bahasa Melayu Komunikasi,87
+46,Quinn White,Python Programming,63
+46,Quinn White,Introduction to Networking,52
+46,Quinn White,System Software and Computing Concepts,63
+47,Samuel Morris,Introduction to Database,61
+47,Samuel Morris,Digital Thinking and Innovation,89
+47,Samuel Morris,Bahasa Melayu Komunikasi,50
+48,Peter Jones,Python Programming,59
+48,Peter Jones,Introduction to Networking,87
+48,Peter Jones,System Software and Computing Concepts,59
+49,Mia Collins,Introduction to Database,97
+49,Mia Collins,Digital Thinking and Innovation,64
+49,Mia Collins,Bahasa Melayu Komunikasi,88
+50,Kevin Turner,Python Programming,100
+50,Kevin Turner,Introduction to Networking,78
+50,Kevin Turner,System Software and Computing Concepts,62
+51,Ursula Thomas,Introduction to Database,90
+51,Ursula Thomas,Digital Thinking and Innovation,57
+51,Ursula Thomas,Bahasa Melayu Komunikasi,94
+52,Kevin Hill,Python Programming,76
+52,Kevin Hill,Introduction to Networking,76
+52,Kevin Hill,System Software and Computing Concepts,74
+53,Yara White,Introduction to Database,51
+53,Yara White,Digital Thinking and Innovation,70
+53,Yara White,Bahasa Melayu Komunikasi,72
+54,Olivia Rogers,Python Programming,93
+54,Olivia Rogers,Introduction to Networking,97
+54,Olivia Rogers,System Software and Computing Concepts,55
+55,Jack Anderson,Introduction to Database,83
+55,Jack Anderson,Digital Thinking and Innovation,96
+55,Jack Anderson,Bahasa Melayu Komunikasi,69
+56,Rebecca Thompson,Python Programming,64
+56,Rebecca Thompson,Introduction to Networking,94
+56,Rebecca Thompson,System Software and Computing Concepts,95
+57,Xavier Murphy,Introduction to Database,63
+57,Xavier Murphy,Digital Thinking and Innovation,74
+57,Xavier Murphy,Bahasa Melayu Komunikasi,74
+58,Diana Anderson,Python Programming,50
+58,Diana Anderson,Introduction to Networking,86
+58,Diana Anderson,System Software and Computing Concepts,89
+59,Charlie Rivera,Introduction to Database,52
+59,Charlie Rivera,Digital Thinking and Innovation,82
+59,Charlie Rivera,Bahasa Melayu Komunikasi,98
+60,Uma Green,Python Programming,83
+60,Uma Green,Introduction to Networking,87
+60,Uma Green,System Software and Computing Concepts,72
+61,Rachel Jones,Introduction to Database,99
+61,Rachel Jones,Digital Thinking and Innovation,66
+61,Rachel Jones,Bahasa Melayu Komunikasi,55
+62,Nina Campbell,Python Programming,74
+62,Nina Campbell,Introduction to Networking,86
+62,Nina Campbell,System Software and Computing Concepts,78
+63,Tanya Thompson,Introduction to Database,72
+63,Tanya Thompson,Digital Thinking and Innovation,98
+63,Tanya Thompson,Bahasa Melayu Komunikasi,73
+64,Nina Stewart,Python Programming,80
+64,Nina Stewart,Introduction to Networking,62
+64,Nina Stewart,System Software and Computing Concepts,58
+65,Felix Green,Introduction to Database,92
+65,Felix Green,Digital Thinking and Innovation,85
+65,Felix Green,Bahasa Melayu Komunikasi,51
+66,Peter Hill,Python Programming,54
+66,Peter Hill,Introduction to Networking,72
+66,Peter Hill,System Software and Computing Concepts,72
+67,Julia Jackson,Introduction to Database,80
+67,Julia Jackson,Digital Thinking and Innovation,65
+67,Julia Jackson,Bahasa Melayu Komunikasi,73
+68,Ian Thomas,Python Programming,100
+68,Ian Thomas,Introduction to Networking,99
+68,Ian Thomas,System Software and Computing Concepts,68
+69,Vincent Phillips,Introduction to Database,54
+69,Vincent Phillips,Digital Thinking and Innovation,57
+69,Vincent Phillips,Bahasa Melayu Komunikasi,87
+70,Isabel Jackson,Python Programming,92
+70,Isabel Jackson,Introduction to Networking,98
+70,Isabel Jackson,System Software and Computing Concepts,88
+71,Vincent Parker,Introduction to Database,60
+71,Vincent Parker,Digital Thinking and Innovation,81
+71,Vincent Parker,Bahasa Melayu Komunikasi,100
+72,Brandon Parker,Python Programming,95
+72,Brandon Parker,Introduction to Networking,88
+72,Brandon Parker,System Software and Computing Concepts,71
+73,Zane King,Introduction to Database,56
+73,Zane King,Digital Thinking and Innovation,84
+73,Zane King,Bahasa Melayu Komunikasi,69
+74,Oliver Lopez,Python Programming,88
+74,Oliver Lopez,Introduction to Networking,50
+74,Oliver Lopez,System Software and Computing Concepts,89
+75,Grace Mitchell,Introduction to Database,100
+75,Grace Mitchell,Digital Thinking and Innovation,68
+75,Grace Mitchell,Bahasa Melayu Komunikasi,94
+76,Fiona Bell,Python Programming,82
+76,Fiona Bell,Introduction to Networking,89
+76,Fiona Bell,System Software and Computing Concepts,52
+77,Diana Davis,Introduction to Database,58
+77,Diana Davis,Digital Thinking and Innovation,57
+77,Diana Davis,Bahasa Melayu Komunikasi,90
+78,Julia Collins,Python Programming,71
+78,Julia Collins,Introduction to Networking,69
+78,Julia Collins,System Software and Computing Concepts,56
+79,Kevin Bailey,Introduction to Database,76
+79,Kevin Bailey,Digital Thinking and Innovation,81
+79,Kevin Bailey,Bahasa Melayu Komunikasi,53
+80,Rebecca Adams,Python Programming,93
+80,Rebecca Adams,Introduction to Networking,66
+80,Rebecca Adams,System Software and Computing Concepts,60
+81,Mia Jones,Introduction to Database,96
+81,Mia Jones,Digital Thinking and Innovation,98
+81,Mia Jones,Bahasa Melayu Komunikasi,98
+82,Yara Scott,Python Programming,60
+82,Yara Scott,Introduction to Networking,70
+82,Yara Scott,System Software and Computing Concepts,68
+83,Mia Hill,Introduction to Database,52
+83,Mia Hill,Digital Thinking and Innovation,89
+83,Mia Hill,Bahasa Melayu Komunikasi,84
+84,Henry Jackson,Python Programming,66
+84,Henry Jackson,Introduction to Networking,99
+84,Henry Jackson,System Software and Computing Concepts,52
+85,Jack Smith,Introduction to Database,90
+85,Jack Smith,Digital Thinking and Innovation,67
+85,Jack Smith,Bahasa Melayu Komunikasi,92
+86,Rebecca Cook,Python Programming,71
+86,Rebecca Cook,Introduction to Networking,56
+86,Rebecca Cook,System Software and Computing Concepts,80
+87,Hannah Morris,Introduction to Database,50
+87,Hannah Morris,Digital Thinking and Innovation,73
+87,Hannah Morris,Bahasa Melayu Komunikasi,78
+88,Isabel Bell,Python Programming,72
+88,Isabel Bell,Introduction to Networking,71
+88,Isabel Bell,System Software and Computing Concepts,86
+89,Rachel Murphy,Introduction to Database,67
+89,Rachel Murphy,Digital Thinking and Innovation,65
+89,Rachel Murphy,Bahasa Melayu Komunikasi,50
+90,Peter Young,Python Programming,91
+90,Peter Young,Introduction to Networking,72
+90,Peter Young,System Software and Computing Concepts,89
+91,Hannah Harris,Introduction to Database,73
+91,Hannah Harris,Digital Thinking and Innovation,78
+91,Hannah Harris,Bahasa Melayu Komunikasi,55
+92,Brandon Miller,Python Programming,98
+92,Brandon Miller,Introduction to Networking,80
+92,Brandon Miller,System Software and Computing Concepts,67
+93,Daniel Smith,Introduction to Database,78
+93,Daniel Smith,Digital Thinking and Innovation,67
+93,Daniel Smith,Bahasa Melayu Komunikasi,54
+94,Ursula Cook,Python Programming,82
+94,Ursula Cook,Introduction to Networking,54
+94,Ursula Cook,System Software and Computing Concepts,84
+95,Quincy Perez,Introduction to Database,56
+95,Quincy Perez,Digital Thinking and Innovation,79
+95,Quincy Perez,Bahasa Melayu Komunikasi,74
+96,Willow Wilson,Python Programming,78
+96,Willow Wilson,Introduction to Networking,76
+96,Willow Wilson,System Software and Computing Concepts,97
+97,Grace Martinez,Introduction to Database,90
+97,Grace Martinez,Digital Thinking and Innovation,76
+97,Grace Martinez,Bahasa Melayu Komunikasi,55
+98,Olivia Martin,Python Programming,99
+98,Olivia Martin,Introduction to Networking,88
+98,Olivia Martin,System Software and Computing Concepts,77
+99,Olivia Perez,Introduction to Database,66
+99,Olivia Perez,Digital Thinking and Innovation,82
+99,Olivia Perez,Bahasa Melayu Komunikasi,74
+100,Mia Moore,Python Programming,74
+100,Mia Moore,Introduction to Networking,97
+100,Mia Moore,System Software and Computing Concepts,75
+101,H,Introduction to Networking,100
+1,Olivia Davis,System Software and Computing Concepts,100
+120,M,System Software and Computing Concepts,90
+2,Bob Morgan,System Software and Computing Concepts,100

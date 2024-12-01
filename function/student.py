@@ -34,6 +34,7 @@ def menu():
 # File Path 
 path_student = "database/Student.txt"
 path_module = "database/module.txt"
+path_attendance = "database/attendance.txt"
 
 # Data Function 
 # Reading data and assign it to list and make it usable
@@ -70,17 +71,25 @@ def view_module():
 
         #Getting User Tp number
         while True:
-            student_id = input("Input student id (TPxxxxxx): ").strip()
+            student_id = input("Input student id (TPxxxxxx): ").strip().upper()
             # Validating input
-            if ("TP" or "Tp" or "tp" in student_id) and len(student_id) == 8:
+            for student in student_record:
+                if (("TP" or "Tp" or "tp" in student_id) and len(student_id) == 8) and student_id == student[0]:
+                    condition = True
+                    break
+                else:
+                    condition = False
+            if condition == True:
                 break
-            else:
-                print("Pls try again")
+            elif condition == False:      
+                print("Tp is not found")
+
+            
 
         # Cheking student have enrool or not [preventing duplicate data]
         student_module = []
         for student in student_record:
-            if student_id == student[0]:
+            if student_id.lower() == student[0]:
                 for i in range (3,len(student)):
                     if len(student) == 4:
                         student_module.append(student[3])
@@ -113,17 +122,20 @@ def view_module():
 # Enroll in module
 def enroll():
     try:
-        avaible_module = view_module()
-        avaible_module = avaible_module[0]
-        student_id = avaible_module[1]
-
+        # Getting data that returned by the function
+        function_value = view_module()
+        avaible_module = function_value[0]
+        student_id = function_value[1]
+        
+        # Getting user input and getting validation
         while True:
             enroll_choice = input("Enter the module id to enroll: ")
             if enroll_choice.upper() in [item[0] for item in avaible_module]:
                 break
             else:
                 print("You input the wrong id")
-                
+        
+        # Read the txt file data
         with open(path_student,"r") as file:
             data = file.readlines()
         
@@ -147,4 +159,6 @@ def enroll():
     except KeyboardInterrupt:
         pass
 
-enroll()
+# View Grades
+def view_grade():
+    pass

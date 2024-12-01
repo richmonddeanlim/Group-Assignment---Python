@@ -1,4 +1,6 @@
 from datetime import datetime
+from function.student import data_reading as read
+from function.student import path_student
 
 # Creating menu for user to choose 
 def menu():
@@ -122,26 +124,34 @@ def fee_record():
                                 
 
                         while True:
-                            student_id = input("Input student id (TPxxxxxx): ")
+                            student_record = read(path_student)
+                            student_id = input("Input student id (TPxxxxxx): ").strip().upper()
                             # Validating input
-                            if ("TP" or "Tp" or "tp" in student_id) and len(student_id) == 8:
+                            for Student in student_record:
+                                if (("TP" or "Tp" or "tp" in student_id) and len(student_id) == 8) and student_id == Student[0]:
+                                    condition = True
+                                    break
+                                else:
+                                    condition = False
+                            if condition == True:
                                 break
-                            else:
-                                print("Pls try again")
+                            elif condition == False:      
+                                print("Tp is not found")
+
 
                         student_name = input("Input Student name: ")
 
                         while True:
                             # Getting an input with value error handling
                             try:
-                                fee = int(input("Input the total amount of fee: "))
+                                fee = int(input("Input the total amount of fee: ").strip())
                                 break
                             except ValueError:
                                 print("Pls enter a integer")
 
                         while True:
                             # Validating input
-                            fee_status = input("Input the status (Paid/Unpaid): ")
+                            fee_status = input("Input the status (Paid/Unpaid): ").strip()
                             lowercase_str = fee_status.lower()
                             if lowercase_str in ["unpaid","paid"]:
                                 break
