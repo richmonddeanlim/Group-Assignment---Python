@@ -356,7 +356,7 @@ def unenroll():
     except KeyboardInterrupt :
         pass
 
-# This is the main function program for Uni management system
+# This is the main function  of student for Uni management system
 def main():
     while True:
         try:
@@ -401,5 +401,3 @@ def main():
         
         except KeyboardInterrupt:
             pass
-
-main()

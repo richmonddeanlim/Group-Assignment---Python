@@ -1,11 +1,18 @@
 from datetime import datetime
-from function.student import data_reading as read
-from function.student import path_student
+
+# Need to be like this because when running in diff directory it could cause module not found
+# so whenever running from this directory or in main directory will not cause module error
+try:
+    from function.student import data_reading as read
+    from function.student import path_student
+except ModuleNotFoundError:
+    from student import data_reading as read
+    from student import path_student
 
 # Creating menu for user to choose 
 def menu():
     try:
-        # Displaying menu for user
+        # Displaying menu for usern
         print("=" * 32)
         print(f"{"Accountant Menu":^32}")
         print("=" * 32)
@@ -280,7 +287,7 @@ def update_fee():
         # Validating input
         while True:
             try:
-                change_choice = int(input(""))
+                change_choice = int(input("Input the number of option: "))
                 break
                 
             except ValueError:
@@ -301,6 +308,9 @@ def update_fee():
 
             with open(path,"w") as file:
                 file.writelines(data)
+            
+            input("Press enter to continue")
+
 
         # Choice 2
         elif change_choice == 2:
@@ -309,6 +319,7 @@ def update_fee():
                     status = input("Change payment status(Paid/Unpaid): ")
 
                     if status.lower() in ["paid","unpaid"] :
+                        input("Press enter to continue")
                         break
 
                     else:
@@ -440,47 +451,46 @@ def financial_summary():
         print("\n\nExiting")
 
 # This is the main function program for Uni management system
-# def main():
-#     while True:
-#         try:
-#             # Getting user Choice
-#             choice = menu()
+def main():
+    while True:
+        try:
+            # Getting user Choice
+            choice = menu()
 
-#             # Open record menu
-#             if choice == 1:
-#                 print("\n")
-#                 fee_record()
+            # Open record menu
+            if choice == 1:
+                print("\n")
+                fee_record()
 
-#             # View Outstanding fee
-#             elif choice == 2:
-#                 print("\n")
-#                 outstanding_fee()
+            # View Outstanding fee
+            elif choice == 2:
+                print("\n")
+                outstanding_fee()
 
-#             # Update payment information
-#             elif choice == 3:
-#                 print("\n")
-#                 update_fee()
+            # Update payment information
+            elif choice == 3:
+                print("\n")
+                update_fee()
 
-#             # Print receipt
-#             elif choice == 4:
-#                 print("\n")
-#                 receipt()
+            # Print receipt
+            elif choice == 4:
+                print("\n")
+                receipt()
 
-#             # Viewing Financial Summary
-#             elif choice == 5:
-#                 print("\n")
-#                 financial_summary()
+            # Viewing Financial Summary
+            elif choice == 5:
+                print("\n")
+                financial_summary()
 
-#             #Exit 
-#             elif choice == 6:
-#                 print("Thank You for using the program")
-#                 break
+            #Exit 
+            elif choice == 6:
+                break
 
-#             # When keyboard interrupt it will return False on the function
-#             elif choice == False:
-#                 break
+            # When keyboard interrupt it will return False on the function
+            elif choice == False:
+                break
 
-#             print("\n")
+            print("\n")
         
-#         except KeyboardInterrupt:
-#             print("\n\nExiting")
+        except KeyboardInterrupt:
+            print("\n\nExiting")

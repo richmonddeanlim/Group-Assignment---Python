@@ -30,57 +30,16 @@ try:
             pass
 
         elif function_choice == 3:
-            # copy paste the main here
-            pass
-        
+            print("\n")
+            student.main()
+                
         elif function_choice == 4:
             # copy paste the main here
             pass
         
         elif function_choice == 5:
-            while True:
-                try:
-                    # Getting user Choice
-                    choice = accountant.menu()
-
-                    # Open record menu
-                    if choice == 1:
-                        print("\n")
-                        accountant.fee_record()
-
-                    # View Outstanding fee
-                    elif choice == 2:
-                        print("\n")
-                        accountant.outstanding_fee()
-
-                    # Update payment information
-                    elif choice == 3:
-                        print("\n")
-                        accountant.update_fee()
-
-                    # Print receipt
-                    elif choice == 4:
-                        print("\n")
-                        accountant.receipt()
-
-                    # Viewing Financial Summary
-                    elif choice == 5:
-                        print("\n")
-                        accountant.financial_summary()
-
-                    #Exit 
-                    elif choice == 6:
-                        print("Thank You for using the program")
-                        break
-
-                    # When keyboard interrupt it will return False on the function
-                    elif choice == False:
-                        break
-
-                    print("\n")
-                
-                except KeyboardInterrupt:
-                    print("\n\nExiting")
+            print("\n")
+            accountant.main()
         
         elif function_choice == 6:
             print("\nExiting the program")
