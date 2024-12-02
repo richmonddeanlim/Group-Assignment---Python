@@ -1,30 +1,3 @@
-1,Willy,2,0
-2,Jervin,1,0
-12,Halo,0,0
-4,Hello,0,0
-3,Flowy,0,0
-101,Willy,0,0
-111,Lawo,0,0
-,,0,0
-1,1231,0,0
-111,Asd,0,0
-123,Lolo,0,0
-1,Dsald,0,0
-1,Dsala,0,0
-TP000001,Awdas,0,0
-123,Sdad,0,0
-10,123,0,0
-1,123,0,0
-1,1,0,0
-4,5,0,0
-1,['Olivia Davis'],0,0
-2,['Bob Morgan'],0,0
-1,['Olivia Davis'],0,0
-2,['Bob Morgan'],0,0
-10,['Fiona Taylor'],0,0
-101,Hallo,0,0
-101,['H'],0,0
-1,['Olivia Davis'],0,0
-120,Memek,0,0
-130,Pepek,0,0
-2,['Bob Morgan'],0,0
+TP1,Olivia Davis,0,0
+TP2,Bob Morgan,0,0
+TP3,Rachel Thomas,0,0

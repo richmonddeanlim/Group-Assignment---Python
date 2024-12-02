@@ -363,27 +363,27 @@ def main():
             # Getting user Choice
             choice = menu()
 
-            # Open record menu
+            # View Module
             if choice == 1:
                 print("\n")
                 view_module()
 
-            # View Outstanding fee
+            # Enroll to the module
             elif choice == 2:
                 print("\n")
                 enroll()
 
-            # Update payment information
+            # View Grade
             elif choice == 3:
                 print("\n")
                 view_grade()
 
-            # Print receipt
+            # View Student attendance
             elif choice == 4:
                 print("\n")
                 student_attendance()
 
-            # Viewing Financial Summary
+            # Unenroll from the module
             elif choice == 5:
                 print("\n")
                 unenroll()
@@ -393,7 +393,7 @@ def main():
                 print("Thank You for using the program")
                 break
 
-            # When keyboard interrupt it will return False on the function
+            # When keyboard interrupt it will return False on the function menu()
             elif choice == False:
                 break
 

@@ -1,5 +1,6 @@
 from function import accountant
 from function import student
+from function import lecture
 
 try:
     while True:
@@ -26,8 +27,9 @@ try:
             pass 
 
         elif function_choice == 2:
-            # copy paste the main here
-            pass
+            print("\n")
+            lecture.main()
+            
 
         elif function_choice == 3:
             print("\n")
