@@ -116,7 +116,10 @@ def view_module():
         else:
             print("No Module are avaible")
 
+        input("\nPress enter to continue")
+
         return avaible_module,student_id
+
     
     except KeyboardInterrupt:
         pass
@@ -131,32 +134,39 @@ def enroll():
         
         # Getting user input and getting validation
         while True:
-            enroll_choice = input("Enter the module id to enroll: ")
-            if enroll_choice.upper() in [item[0] for item in avaible_module]:
-                break
-            else:
-                print("You input the wrong id")
-        
-        # Read the txt file data
-        with open(path_student,"r") as file:
-            data = file.readlines()
-        
-        # finding the index of tp number
-        i = 0
-        for item in student_id:
-            if item in student_id:
-                break
-            else:
-                i += 1
+            while True:
+                enroll_choice = input("Enter the module id to enroll: ")
+                if enroll_choice.upper() in [item[0] for item in avaible_module]:
+                    break
+                else:
+                    print("You input the wrong id")
+            
+            # Read the txt file data
+            with open(path_student,"r") as file:
+                data = file.readlines()
+            
+            # finding the index of tp number
+            i = 0
+            for item in student_id:
+                if item in student_id:
+                    break
+                else:
+                    i += 1
 
-        # Replacing the line in certain index
-        data[i] = data[i].replace(str(f"\n"), str(f",{enroll_choice}\n"))
+            # Replacing the line in certain index
+            data[i] = data[i].replace(str(f"\n"), str(f",{enroll_choice}\n"))
 
-        # Rewrite the updated file
-        with open(path_student,"w") as file:
-            file.writelines(data)
-        
-        print("\nData have been updated\n")
+            # Rewrite the updated file
+            with open(path_student,"w") as file:
+                file.writelines(data)
+            
+            choice = input("enter 1 to continue: ")
+
+            if choice == 1:
+                continue
+            else:
+                break
+
 
     except FileNotFoundError:
         print('pls open from the main file directory')
@@ -204,9 +214,11 @@ def view_grade():
                 num += 1
                 print(f"{num:^4} {item[0]:<32} {item[1]:^12} {item[2]:^12}")
             print("=" * 60)
+            input("\nPress enter to continue")
 
         else:
-            print("No Module are avaible")
+            print("No Module are avaible\n")
+            input("Press enter to continue")
 
     except KeyboardInterrupt:
        pass
@@ -242,11 +254,14 @@ def student_attendance():
 
             percentage = (attendance_list[0]/(attendance_list[1]+attendance_list[0]))*100
 
-            print(f"Your attendance percentage is: {percentage:.2f}%")
+            print(f"Your attendance percentage is: {percentage:.2f}%\n")
+            input("Press enter to continue")
 
     except ZeroDivisionError:
         if attendance_list[0] == 0 and attendance_list[1] == 0:
-            print("You never attend or absent any classes")
+            print("You never attend or absent any classes\n")
+            input("Press enter to continue")
+
         elif attendance_list[0] > 0 and attendance_list[1] == 0:
             print("Zero Devision Error")
     
@@ -296,41 +311,95 @@ def unenroll():
                 print(f"{num:^4} {module_id:^12} ")
             print("=" * 30)
 
+            while True:
+            # Getting user input and getting validation
+                while True:
+                    unenroll_choice = input("Enter the module id to unenroll: ")
+                    if unenroll_choice.upper() in [item for item in unenroll_module]:
+                        break
+                    else:
+                        print("You input the wrong id")
+                
+                # Read the txt file data
+                with open(path_student,"r") as file:
+                    data = file.readlines()
+                
+                # finding the index of tp number
+                i = 0
+                for item in student_id:
+                    if item in student_id:
+                        break
+                    else:
+                        i += 1
+
+                # Replacing the line in certain index
+                data[i] = data[i].replace(str(f",{unenroll_choice}"), str(f""))
+
+                # Rewrite the updated file
+                with open(path_student,"w") as file:
+                    file.writelines(data)
+                
+                choice = input("enter 1 to continue: ")
+
+                if choice == "1":
+                    continue
+                else:
+                    break
+
         else:
             print("No Module are avaible")
-    
-        # Getting user input and getting validation
-        while True:
-            unenroll_choice = input("Enter the module id to unenroll: ")
-            if unenroll_choice.upper() in [item for item in unenroll_module]:
-                break
-            else:
-                print("You input the wrong id")
-        
-        # Read the txt file data
-        with open(path_student,"r") as file:
-            data = file.readlines()
-        
-        # finding the index of tp number
-        i = 0
-        for item in student_id:
-            if item in student_id:
-                break
-            else:
-                i += 1
-
-        # Replacing the line in certain index
-        data[i] = data[i].replace(str(f",{unenroll_choice}"), str(f""))
-
-        # Rewrite the updated file
-        with open(path_student,"w") as file:
-            file.writelines(data)
-        
-        print("\nYou have sucessfully unenroll from the module")
-
+            input("\nPress enter to continue")
+            
     except FileNotFoundError:
         print('pls open from the main file directory')
     
     except KeyboardInterrupt :
         pass
 
+# This is the main function program for Uni management system
+def main():
+    while True:
+        try:
+            # Getting user Choice
+            choice = menu()
+
+            # Open record menu
+            if choice == 1:
+                print("\n")
+                view_module()
+
+            # View Outstanding fee
+            elif choice == 2:
+                print("\n")
+                enroll()
+
+            # Update payment information
+            elif choice == 3:
+                print("\n")
+                view_grade()
+
+            # Print receipt
+            elif choice == 4:
+                print("\n")
+                student_attendance()
+
+            # Viewing Financial Summary
+            elif choice == 5:
+                print("\n")
+                unenroll()
+
+            #Exit 
+            elif choice == 6:
+                print("Thank You for using the program")
+                break
+
+            # When keyboard interrupt it will return False on the function
+            elif choice == False:
+                break
+
+            print("\n")
+        
+        except KeyboardInterrupt:
+            pass
+
+main()
