@@ -1,8 +1,8 @@
-student_grade_path="student_grade.txt"
-attendance_path="attendance.txt"
-lecture_module_path="lecturer_modules.txt"
-administrator_path="administrator.txt"
-student_list_path="student.txt"
+student_grade_path="database/student_grade.txt"
+attendance_path="database/attendance.txt"
+lecture_module_path="database/lecturer_modules.txt"
+administrator_path="database/administrator.txt"
+student_list_path="database/student.txt"
 def decoration(): #function to call decoration
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 def get_module_code(module_name):
@@ -112,6 +112,7 @@ def record_grade():
         if duplicate_found:
             print("Student with that ID already has a grade in that module.")
             input("Press any key to leave")
+            return
         while True:
             grade=input("Enter Student grade: ")
             if 0 < int(grade) <= 100:
@@ -382,4 +383,4 @@ def main():
                 print("Wrong Input")
     except KeyboardInterrupt:
         print("\nKeyboard Interrupt Error")
-lecturer_interface()
+

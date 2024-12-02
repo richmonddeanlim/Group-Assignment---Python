@@ -1,0 +1,6 @@
+PYP,Python Programming,10
+IDN,Introduction to Networking,10
+SSCC,System Software and Computing Concepts,10
+IDB,Introduction to Database,10
+DGTIN,Digital Thinking and Innovation,10
+BMK,Bahasa Melayu Komunikasi,10
