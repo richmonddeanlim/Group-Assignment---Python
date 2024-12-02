@@ -35,6 +35,7 @@ def menu():
 path_student = "database/Student.txt"
 path_module = "database/module.txt"
 path_attendance = "database/attendance.txt"
+path_grade = "database/student_grade.txt"
 
 # Data Function 
 # Reading data and assign it to list and make it usable
@@ -66,7 +67,6 @@ def view_module():
 
         #Getting list for avaible module
         # indexing 4 to above will show student module
-        student_record = [student for student in student_record]
         module_list = [(module[0],module[1]) for module in module_record]
 
         #Getting User Tp number
@@ -83,8 +83,6 @@ def view_module():
                 break
             elif condition == False:      
                 print("Tp is not found")
-
-            
 
         # Cheking student have enrool or not [preventing duplicate data]
         student_module = []
@@ -116,7 +114,9 @@ def view_module():
 
         return avaible_module,student_id
     
-    except KeyboardInterrupt:
+    except KeyboardInterrupt or FileNotFoundError:
+        if FileNotFoundError:
+            print('pls open from the main file directory')
         pass
 
 # Enroll in module
@@ -156,9 +156,60 @@ def enroll():
         
         print("\nData have been updated\n")
 
-    except KeyboardInterrupt:
+    except KeyboardInterrupt or FileNotFoundError:
+        if FileNotFoundError:
+            print('pls open from the main file directory')
         pass
 
 # View Grades
 def view_grade():
-    pass
+    try:
+        # Getting the data
+        student_record = data_reading(path_student)
+        grade_record = data_reading(path_grade)
+
+        # #Getting User Tp number
+        while True:
+            student_id = input("Input student id (TPxxxxxx): ").strip().upper()
+            # Validating input
+            for student in student_record:
+                if (("TP" or "Tp" or "tp" in student_id) and len(student_id) == 8) and student_id == student[0]:
+                    condition = True
+                    break
+                else:
+                    condition = False
+            if condition == True:
+                break
+            elif condition == False:      
+                print("Tp is not found")
+
+        # Fetch the student module name and grade based on student id
+        grade_list = []
+        for data in grade_record:
+            if student_id.upper() == data[0]:
+                grade_list.append([data[2],data[3],data[4]])
+        
+        # Print the grade
+        if grade_list:
+            # Print header
+            print("=" * 60)
+            print(f"{"No":^4} {'Module Name':^32} {'Module ID':^12} {'Grade':^12}")
+            print("=" * 60)
+            # Print each data with format string ( using ^ to make center alignment)
+            num = 0
+            for item in grade_list:
+                num += 1
+                print(f"{num:^4} {item[0]:<32} {item[1]:^12} {item[2]:^12}")
+            print("=" * 60)
+
+        else:
+            print("No Module are avaible")
+
+    except KeyboardInterrupt or FileNotFoundError:
+        if FileNotFoundError:
+            print('pls open from the main file directory')
+        pass
+
+#View Student attendance
+                
+view_grade()
