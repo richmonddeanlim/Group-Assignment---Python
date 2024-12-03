@@ -44,7 +44,7 @@ def menu():
         return False
 
 #File Path 
-path = "database/accnt.txt"
+path = "database/accountant.txt"
 
 # Data Function 
 # Reading data and assign it to list and make it usable
@@ -72,7 +72,7 @@ def fee_record():
     try:
         # Giving the option
         print("=" * 30)
-        print(f"{"Fee_record":^30}")
+        print(f"{"Fee record":^30}")
         print("=" * 30)
         print("1.View Record")
         print("2.Add Record")
@@ -175,7 +175,12 @@ def fee_record():
                             file.write(",".join(map(str,fee_data)).strip())
                             file.write("\n")
 
-                        input("\nPress enter to continue (ctrl + c to stop)\n")
+                        # creating a certain condition to stop looping of add data record 
+                        choice = input("\nPress enter to continue (0 to stop): ")
+                        if choice == "0":
+                            break
+                        else:
+                            continue
 
                     # Clarify if any error occur
                     except KeyboardInterrupt or FileNotFoundError:
