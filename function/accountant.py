@@ -44,7 +44,7 @@ def menu():
         return False
 
 #File Path 
-path = "database/accountant.txt"
+path = "database/fee_record.txt"
 
 # Data Function 
 # Reading data and assign it to list and make it usable
