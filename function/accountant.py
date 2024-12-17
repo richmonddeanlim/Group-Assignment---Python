@@ -92,16 +92,16 @@ def fee_record():
                     # Print the record data
                     if record_data:
                             # Print header
-                            print(f"{"Record Fee":^70}")
-                            print("=" * 70)
-                            print(f"{"No":^4} {'Date':^12} {'Student ID':^12} {'Name':^15} {'Fee_Amount':^12} {'Status':^10}")
-                            print("=" * 70)
+                            print(f"{"Record Fee":^75}")
+                            print("=" * 75)
+                            print(f"{"No":^4} {'Date':^12} {'Student ID':^12} {'Name':^20} {'Fee_Amount':^12} {'Status':^10}")
+                            print("=" * 75)
                             # Print each data with format string ( using ^ to make center alignment)
                             num = 0
                             for data in record_data:
                                 num += 1
-                                print(f"{num:^4} {data[0]:^12} {data[1]:^12} {data[2]:^15} {data[3]:^12} {data[4]:^10}")
-                            print("=" * 70)
+                                print(f"{num:^4} {data[0]:^12} {data[1]:^12} {data[2]:^20} {data[3]:^12} {data[4]:^10}")
+                            print("=" * 75)
                     else:
                         print("No record found")
 
@@ -224,16 +224,16 @@ def outstanding_fee():
         # Print the unpaid_record table ( when the list is empty it will return False )
         if unpaid_record:
                 # Print header
-                print(f"{"Outstanding Fee":^70}")
-                print("=" * 70)
-                print(f"{"No":^4} {'Date':^12} {'Student ID':^12} {'Name':^15} {'Fee_Amount':^12} {'Status':^10}")
-                print("=" * 70)
+                print(f"{"Outstanding Fee":^75}")
+                print("=" * 75)
+                print(f"{"No":^4} {'Date':^12} {'Student ID':^12} {'Name':^20} {'Fee_Amount':^12} {'Status':^10}")
+                print("=" * 75)
                 # Print each data with format string ( using ^ to make center alignment)
                 num = 0
                 for data in unpaid_record:
                     num += 1
-                    print(f"{num:^4} {data[0]:^12} {data[1]:^12} {data[2]:^15} {data[3]:^12} {data[4]:^10}")
-                print("=" * 70)
+                    print(f"{num:^4} {data[0]:^12} {data[1]:^12} {data[2]:^20} {data[3]:^12} {data[4]:^10}")
+                print("=" * 75)
         else:
             print("No outstanding fees found.")
         
@@ -251,15 +251,15 @@ def update_fee():
         # Print the record data
         if record_data:
             # Print header
-            print("=" * 70)
-            print(f"{"No":^4} {'Date':^12} {'Student ID':^12} {'Name':^15} {'Fee_Amount':^12} {'Status':^10}")
-            print("=" * 70)
+            print("=" * 75)
+            print(f"{"No":^4} {'Date':^12} {'Student ID':^12} {'Name':^20} {'Fee_Amount':^12} {'Status':^10}")
+            print("=" * 75)
             # Print each data with format string ( using ^ to make center alignment)
             num = 0
             for data in record_data:
                 num += 1
-                print(f"{num:^4} {data[0]:^12} {data[1]:^12} {data[2]:^15} {data[3]:^12} {data[4]:^10}")
-            print("=" * 70)
+                print(f"{num:^4} {data[0]:^12} {data[1]:^12} {data[2]:^20} {data[3]:^12} {data[4]:^10}")
+            print("=" * 75)
 
         else:
             print("No record data is found")
@@ -369,15 +369,15 @@ def receipt():
         print(f"{"Available receipt":^70}")
         if paid_data:
             # Print header
-            print("=" * 70)
-            print(f"{"No":^4} {'Date':^12} {'Student ID':^12} {'Name':^15} {'Fee_Amount':^12} {'Status':^10}")
-            print("=" * 70)
+            print("=" * 75)
+            print(f"{"No":^4} {'Date':^12} {'Student ID':^12} {'Name':^20} {'Fee_Amount':^12} {'Status':^10}")
+            print("=" * 75)
             # Print each data with format string ( using ^ to make center alignment)
             num = 0
             for data in paid_data:
                 num += 1
-                print(f"{num:^4} {data[0]:^12} {data[1]:^12} {data[2]:^15} {data[3]:^12} {data[4]:^10}")
-            print("=" * 70)
+                print(f"{num:^4} {data[0]:^12} {data[1]:^12} {data[2]:^20} {data[3]:^12} {data[4]:^10}")
+            print("=" * 75)
 
         else:
             print("No student have paid can't print receipt")
@@ -410,7 +410,7 @@ def receipt():
 
         print("\n")
         # Saving the receipt
-        with open("receipt.txt", "r") as file :
+        with open("receipt.txt", "w") as file :
             file.writelines("=" * 30)
             file.writelines(f"\n{"receipt":^30}\n")
             file.writelines("=" * 30)
@@ -424,8 +424,7 @@ def receipt():
         input("Press enter to continue")
     
     except KeyboardInterrupt:
-        print("\n\nExiting")
-
+        pass
 
 # View Financial Summary
 def financial_summary():
