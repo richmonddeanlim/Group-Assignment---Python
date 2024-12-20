@@ -1,8 +1,8 @@
 ==============================
            receipt            
 ==============================
-Student ID   : TP09123
-Student Name : Agus
+Student ID   : TP000001
+Student Name : Aaayan
 Fee Amount   : 2000
 Pay Amount   : 2000
 ==============================

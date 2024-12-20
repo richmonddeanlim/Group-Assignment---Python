@@ -49,6 +49,7 @@ path = "database/fee_record.txt"
 # Data Function 
 # Reading data and assign it to list and make it usable
 def data_reading():
+    try:
         # Making the txt file to variable
         with open(path, "r") as file:
             raw_data = file.readlines()
@@ -66,6 +67,33 @@ def data_reading():
             record_data.append(usable_data)
 
         return record_data
+    
+    except FileNotFoundError:
+        print("Make sure you run from the Group Assignment folder")
+
+#Print record data function
+def print_record(record_data,else_message,title):
+    try:
+        # Print the record data
+        if record_data:
+                # Print header
+                print(f"{title:^75}")
+                print("=" * 75)
+                print(f"{"No":^4} {'Date':^12} {'Student ID':^12} {'Name':^20} {'Fee_Amount':^12} {'Status':^10}")
+                print("=" * 75)
+                # Print each data with format string ( using ^ to make center alignment)
+                num = 0
+                for data in record_data:
+                    num += 1
+                    print(f"{num:^4} {data[0]:^12} {data[1]:^12} {data[2]:^20} {data[3]:^12} {data[4]:^10}")
+                print("=" * 75)
+        else:
+            print(else_message)
+
+        input("Press enter to continue")
+
+    except KeyboardInterrupt:
+        pass
 
 # Fee record function
 def fee_record():
@@ -86,30 +114,13 @@ def fee_record():
             # View the record
             if choice == 1:
                 print("\n")
-                try:
-                    record_data = data_reading()
-                    
-                    # Print the record data
-                    if record_data:
-                            # Print header
-                            print(f"{"Record Fee":^75}")
-                            print("=" * 75)
-                            print(f"{"No":^4} {'Date':^12} {'Student ID':^12} {'Name':^20} {'Fee_Amount':^12} {'Status':^10}")
-                            print("=" * 75)
-                            # Print each data with format string ( using ^ to make center alignment)
-                            num = 0
-                            for data in record_data:
-                                num += 1
-                                print(f"{num:^4} {data[0]:^12} {data[1]:^12} {data[2]:^20} {data[3]:^12} {data[4]:^10}")
-                            print("=" * 75)
-                    else:
-                        print("No record found")
-
-                    input("Press enter to continue")
-
-                except KeyboardInterrupt:
-                    print("\n\nExiting")
-
+                
+                # Read the data
+                record_data = data_reading()
+                else_message = "No record found"
+                
+                # Print the record
+                print_record(record_data,else_message,"Record Fee")
                 break
                 
             # Adding Record
@@ -183,13 +194,14 @@ def fee_record():
                             continue
 
                     # Clarify if any error occur
-                    except KeyboardInterrupt or FileNotFoundError:
-                        if KeyboardInterrupt:
-                            print("\n\nExiting The Program")
-                            break
-                        elif FileNotFoundError:
-                            print("Make sure you run from the Group Assignment folder")
-                            break
+                    except KeyboardInterrupt:
+                        pass
+                        break
+                    except FileNotFoundError:
+                        print("Make sure you run from the Group Assignment folder")
+                        break
+                    except ValueError:
+                        print("Pls input an integer")
                 break
             
             # Reset the record
@@ -210,8 +222,7 @@ def fee_record():
                 print("That option is not available")
 
     except KeyboardInterrupt:
-        print("\n\nExiting")
-
+        pass
 
 # Outstanding Fee View Function
 def outstanding_fee():
@@ -220,27 +231,13 @@ def outstanding_fee():
 
         # Using list comprehension to find and append the data that have unpaid status
         unpaid_record = [record for record in record_data if record[4].lower() == "unpaid"]
+        else_message = "No outstanding fees found."
         
-        # Print the unpaid_record table ( when the list is empty it will return False )
-        if unpaid_record:
-                # Print header
-                print(f"{"Outstanding Fee":^75}")
-                print("=" * 75)
-                print(f"{"No":^4} {'Date':^12} {'Student ID':^12} {'Name':^20} {'Fee_Amount':^12} {'Status':^10}")
-                print("=" * 75)
-                # Print each data with format string ( using ^ to make center alignment)
-                num = 0
-                for data in unpaid_record:
-                    num += 1
-                    print(f"{num:^4} {data[0]:^12} {data[1]:^12} {data[2]:^20} {data[3]:^12} {data[4]:^10}")
-                print("=" * 75)
-        else:
-            print("No outstanding fees found.")
+        # using print record function
+        print_record(unpaid_record,else_message,"Outstanding Fee")
         
-        input("Press enter to continue")
-
     except KeyboardInterrupt:
-        print("\n\nExiting")
+        pass
 
 # Update payment status
 def update_fee():
@@ -249,20 +246,9 @@ def update_fee():
         record_data = data_reading()
 
         # Print the record data
-        if record_data:
-            # Print header
-            print("=" * 75)
-            print(f"{"No":^4} {'Date':^12} {'Student ID':^12} {'Name':^20} {'Fee_Amount':^12} {'Status':^10}")
-            print("=" * 75)
-            # Print each data with format string ( using ^ to make center alignment)
-            num = 0
-            for data in record_data:
-                num += 1
-                print(f"{num:^4} {data[0]:^12} {data[1]:^12} {data[2]:^20} {data[3]:^12} {data[4]:^10}")
-            print("=" * 75)
+        else_message ="No record data is found"
 
-        else:
-            print("No record data is found")
+        print_record(record_data,else_message)
 
         # Validating input
         while True:
@@ -354,7 +340,7 @@ def update_fee():
         # Write the modified text 
 
     except KeyboardInterrupt:
-        print("\n\nExiting the program")
+        pass
 
 # Print Receipt
 def receipt():
@@ -364,23 +350,10 @@ def receipt():
 
         # Filtering the data
         paid_data = [data for data in record_data if data[4] == "Paid"]
+        else_message = "No student have paid can't print receipt"
 
         # Print the available data to print the receipt
-        print(f"{"Available receipt":^70}")
-        if paid_data:
-            # Print header
-            print("=" * 75)
-            print(f"{"No":^4} {'Date':^12} {'Student ID':^12} {'Name':^20} {'Fee_Amount':^12} {'Status':^10}")
-            print("=" * 75)
-            # Print each data with format string ( using ^ to make center alignment)
-            num = 0
-            for data in paid_data:
-                num += 1
-                print(f"{num:^4} {data[0]:^12} {data[1]:^12} {data[2]:^20} {data[3]:^12} {data[4]:^10}")
-            print("=" * 75)
-
-        else:
-            print("No student have paid can't print receipt")
+        print_record(paid_data,else_message,"Avaible Reciept")
 
         # Validating input
         while True:
@@ -452,7 +425,7 @@ def financial_summary():
         input("Press enter to continue")
 
     except KeyboardInterrupt:
-        print("\n\nExiting")
+        pass
 
 # This is the main function program for Uni management system
 def main():
@@ -497,4 +470,4 @@ def main():
             print("\n")
         
         except KeyboardInterrupt:
-            print("\n\nExiting")
+            pass

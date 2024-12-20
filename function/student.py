@@ -32,7 +32,7 @@ def menu():
         return False
 
 # File Path 
-path_student = "database/Student.txt"
+path_student = "database/student.txt"
 path_module = "database/module.txt"
 path_attendance = "database/attendance.txt"
 path_grade = "database/student_grade.txt"
