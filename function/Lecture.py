@@ -1,9 +1,9 @@
 #path for easy access
-student_grade_path="student_grade.txt"
-attendance_path="attendance.txt"
-lecture_module_path= "Lecturer.txt"
-administrator_path="Module.txt"
-student_list_path="Student.txt"
+student_grade_path="database/student_grade.txt"
+attendance_path="database/attendance.txt"
+lecture_module_path= "database/lecturer.txt"
+administrator_path="database/module.txt"
+student_list_path="database/student.txt"
 
 def decoration(): #function to call decoration
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
