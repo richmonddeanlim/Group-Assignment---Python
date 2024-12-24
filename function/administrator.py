@@ -1,46 +1,3 @@
-def main():
-    while True:
-        print("=" * 32)
-        print(f"{'Administrator Menu':^32}")
-        print("=" * 32)
-        print("1 - Add New Module")
-        print("2 - Add New Student")
-        print("3 - Remove Student")
-        print("4 - Add Lecturer")
-        print("5 - Remove Lecturer")
-        print("6 - Update Lecturer")
-        print("7 - Generate Report")
-        print("8 - View All Data")
-        print("9 - Exit")
-        print("=" * 32)
-
-        try:
-            option = int(input("Please enter a number: ").strip())
-        except ValueError:
-            print("Invalid input. Please enter a number.")
-            continue
-
-        if option == 1:
-            add_module()
-        elif option == 2:
-            add_student()
-        elif option == 3:
-            remove_student()
-        elif option == 4:
-            add_lecturer()
-        elif option == 5:
-            remove_lecturer()
-        elif option == 6:
-            update_lecturer()
-        elif option == 7:
-            generate_report()
-        elif option == 8:
-            view_all_data()
-        elif option == 9:
-            print("Exiting...")
-            break
-        else:
-            print("Invalid option. Please enter a number between 1 and 9.")
 
 
 def read(path):
@@ -287,3 +244,47 @@ def view_all_data():
     for lecturer in lecturers:
         print(f"- {lecturer[0]}: {lecturer[1]} ({lecturer[2]})")
 
+
+def main():
+    while True:
+        print("=" * 32)
+        print(f"{'Administrator Menu':^32}")
+        print("=" * 32)
+        print("1 - Add New Module")
+        print("2 - Add New Student")
+        print("3 - Remove Student")
+        print("4 - Add Lecturer")
+        print("5 - Remove Lecturer")
+        print("6 - Update Lecturer")
+        print("7 - Generate Report")
+        print("8 - View All Data")
+        print("9 - Exit")
+        print("=" * 32)
+
+        try:
+            option = int(input("Please enter a number: ").strip())
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+            continue
+
+        if option == 1:
+            add_module()
+        elif option == 2:
+            add_student()
+        elif option == 3:
+            remove_student()
+        elif option == 4:
+            add_lecturer()
+        elif option == 5:
+            remove_lecturer()
+        elif option == 6:
+            update_lecturer()
+        elif option == 7:
+            generate_report()
+        elif option == 8:
+            view_all_data()
+        elif option == 9:
+            print("Exiting...")
+            break
+        else:
+            print("Invalid option. Please enter a number between 1 and 9.")
