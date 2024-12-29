@@ -39,6 +39,7 @@ def module_list():
     print("---Module List---")
     for i, module in enumerate(modules, start=1): #for loop followed with indexing
         print(f"{i}. {module}")
+    return modules
 
 
 #from the module txt(from administrator), I take every module in there and assign index into every one of them as dictionary

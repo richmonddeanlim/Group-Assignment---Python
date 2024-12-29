@@ -175,7 +175,7 @@ def enroll():
         pass
 
     except TypeError:
-        pass
+        pass # passing since the error only happen if i keyboard intterupt and no input
 
 # View Grades
 def view_grade():

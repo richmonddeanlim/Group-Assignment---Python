@@ -1,3 +1,8 @@
+try:
+    from function.lecture import module_list as view_module
+except ModuleNotFoundError:
+    from lecture import view_module
+
 # Read Data From A File And Return It As Lists, If The File Doesn't Exist If Creates One And Returns It
 def read(path):
     try:
@@ -166,15 +171,47 @@ def add_lecturer():
 
     # Ensures Data Entered Meets The Correct Format
     while True:
-        Module = input("Please enter Department name: ").strip()
-        if not Module.replace(" ", "").isalpha():
+        Department = input("Please enter Department name: ").strip()
+        if not Department.replace(" ", "").isalpha():
             print("Invalid Department Name. Please enter a valid department name.")
         else:
             break
 
+    # Ensures Data Entered Meets The Correct Format
+    registered_module = view_module()
+    module_list = []
+    while True:
+        module = input("Please enter Module name: ").strip()                             
+        if module.replace(" ", "").isalpha() and module in registered_module:
+            module_list.append(module)
+            choice = input("Input 0 to stop (enter to continue): ")
+            if choice == "0":
+                break
+            else:
+                continue
+        else:
+            print("Invalid Module Name. Please enter a valid module name.")
+
+    data = []
+    
+    # inserting all data into list
+    for item in [L_ID,L_name,Department]:
+        data.append(item)
+
+    for module in module_list:
+        data.append(module)
+    i = 1
+    lenoflist = len(data) 
+    while i < lenoflist:
+        data.insert(i,",")
+        lenoflist += 1
+        i += 2
+
+    data.append("\n")
+
     # Adds The New Lecturer To Main File And Lecturer File
     with open(l_path, 'a') as l_a:
-        l_a.write(f"{L_ID},{L_name},{Module}\n")
+        l_a.writelines(data)
 
     print("Lecturer Added Successfully!")
     update_files()
@@ -265,7 +302,7 @@ def main():
         try:
             option = int(input("Please enter a number: ").strip())
         except ValueError:
-            print("Invalid input. Please enter a number.")
+            print("Invalid input. Please enter wa number.")
             continue
 
         if option == 1:
