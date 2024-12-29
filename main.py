@@ -58,4 +58,4 @@ try:
             print("That option is not available")
 
 except KeyboardInterrupt:
-    exit
+    pass
