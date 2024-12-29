@@ -1,5 +1,4 @@
-
-
+# Read Data From A File And Return It As Lists, If The File Doesn't Exist If Creates One And Returns It
 def read(path):
     try:
         with open(path, 'r') as file:
@@ -24,7 +23,7 @@ modules = read(m_path)
 lecturers = read(l_path)
 big = read(main_file)
 
-
+# Updates All Files After Changes Have Been Made Such As Add/Delete So Files Any Synced
 def update_files():
     global students, modules, lecturers, big
     students = read(s_path)
@@ -32,13 +31,14 @@ def update_files():
     lecturers = read(l_path)
     big = read(main_file)
 
-
+# Adds A New Module
 def add_module():
     print("\n")
     print("=" * 70)
     print(f"{'Module Information':^70}")
     print("=" * 70)
 
+    # Ensures Data Entered Meets The Correct Format
     while True:
         M_code = input("Please enter Module code (M followed by 3 digits): ").strip().upper()
         if len(M_code) != 4 or M_code[0] != 'M' or not M_code[1:].isdigit():
@@ -48,6 +48,7 @@ def add_module():
         else:
             break
 
+    # Ensures Data Entered Meets The Correct Format
     while True:
         M_name = input("Please enter Module Name: ").strip()
         if not M_name.replace(" ", "").isalpha():
@@ -55,6 +56,7 @@ def add_module():
         else:
             break
 
+    # Ensures Data Entered Meets The Correct Format
     while True:
         try:
             M_credits = int(input("Please enter number of Credit Hours (Enter a positive number): ").strip())
@@ -65,6 +67,7 @@ def add_module():
         except ValueError:
             print("Invalid input. Please enter a valid integer.")
 
+    # Adds The New Module To Main File And Module File
     with open(m_path, 'a') as m_a:
         m_a.write(f"{M_code},{M_name},{M_credits}\n")
 
@@ -74,13 +77,14 @@ def add_module():
     print("Module Added Successfully!")
     update_files()
 
-
+# Adds A New Student
 def add_student():
     print("\n")
     print("=" * 70)
     print(f"{'Student Information':^70}")
     print("=" * 70)
 
+    # Ensures Data Entered Meets The Correct Format
     while True:
         S_ID = input("Please enter student ID (TP followed by 6 digits): ").strip().upper()
         if len(S_ID) != 8 or S_ID[:2] != "TP" or not S_ID[2:].isdigit():
@@ -90,6 +94,7 @@ def add_student():
         else:
             break
 
+    # Ensures Data Entered Meets The Correct Format
     while True:
         S_name = input("Please enter student name: ").strip()
         if not S_name.replace(" ", "").isalpha():
@@ -97,6 +102,7 @@ def add_student():
         else:
             break
 
+    # Ensures Data Entered Meets The Correct Format
     while True:
         Department = input("Please enter Department name: ").strip()
         if not Department.replace(" ", "").isalpha():
@@ -104,6 +110,7 @@ def add_student():
         else:
             break
 
+    # Adds The New Student To Main File And Student File
     with open(s_path, 'a') as s_a:
         s_a.write(f"{S_ID},{S_name},{Department}\n")
 
@@ -113,7 +120,7 @@ def add_student():
     print("Student Added Successfully!")
     update_files()
 
-
+# Removes An Entity
 def remove_function(file_path, identifier, entity_type):
     removed = False
     with open(file_path, 'r') as file:
@@ -132,7 +139,7 @@ def remove_function(file_path, identifier, entity_type):
 
     update_files()
 
-
+# Removes A Student
 def remove_student():
     print("\n")
     print("=" * 70)
@@ -141,12 +148,14 @@ def remove_student():
     S_ID = input("Please enter student ID you want to remove (TP followed by 6 digits): ").strip().upper()
     remove_function(s_path, S_ID, "Student")
 
+# Adds A Lecturer
 def add_lecturer():
     print("\n")
     print("=" * 70)
     print(f"{'Lecturer Information':^70}")
     print("=" * 70)
 
+    # Ensures Data Entered Meets The Correct Format
     while True:
         L_ID = input("Please enter lecturer ID (L followed by 2 digits): ").strip().upper()
         if len(L_ID) != 3 or L_ID[0] != "L" or not L_ID[1:].isdigit():
@@ -156,6 +165,7 @@ def add_lecturer():
         else:
             break
 
+    # Ensures Data Entered Meets The Correct Format
     while True:
         L_name = input("Please enter lecturer name: ").strip()
         if not L_name.replace(" ", "").isalpha():
@@ -163,16 +173,17 @@ def add_lecturer():
         else:
             break
 
+    # Ensures Data Entered Meets The Correct Format
     while True:
-        Department = input("Please enter Department name: ").strip()
-        if not Department.replace(" ", "").isalpha():
+        Module = input("Please enter Department name: ").strip()
+        if not Module.replace(" ", "").isalpha():
             print("Invalid Department Name. Please enter a valid department name.")
         else:
             break
 
-    # Add lecturer details to files
+    # Adds The New Lecturer To Main File And Lecturer File
     with open(l_path, 'a') as l_a:
-        l_a.write(f"{L_ID},{L_name},{Department}\n")
+        l_a.write(f"{L_ID},{L_name},{Module}\n")
 
     with open(main_file, 'a') as main_a:
         main_a.write(f"{L_ID}\n")
@@ -180,6 +191,7 @@ def add_lecturer():
     print("Lecturer Added Successfully!")
     update_files()
 
+# Removes A Lecturer
 def remove_lecturer():
     print("=" * 70)
     print(f"{'Lecturer Deletion Information':^70}")
@@ -187,7 +199,7 @@ def remove_lecturer():
     L_ID = input("Please enter Lecturer ID you want to remove (L followed by 2 digits): ").strip().upper()
     remove_function(l_path, L_ID, "Lecturer")
 
-
+# Updates Lecturer Information
 def update_lecturer():
     print("=" * 70)
     print(f"{'Update Lecturer Information':^70}")
@@ -202,9 +214,10 @@ def update_lecturer():
         for line in lines:
             if L_ID == line.split(",")[0]:
                 found = True
+                # Asks For New Information
                 new_name = input("New Name: ").strip()
-                new_department = input("New Department: ").strip()
-                l_w.write(f"{L_ID},{new_name},{new_department}\n")
+                new_module = input("New Department: ").strip()
+                l_w.write(f"{L_ID},{new_name},{new_module}\n")
             else:
                 l_w.write(line)
 
@@ -214,7 +227,7 @@ def update_lecturer():
         print("Lecturer ID not found.")
     update_files()
 
-
+# Generates A Report On Students, Lecturers and Modules
 def generate_report():
     print("\n")
     print("=" * 70)
@@ -225,7 +238,7 @@ def generate_report():
     print(f"Total number of active courses: {len(modules)}")
     print(f"Total number of faculty: {len(lecturers)}")
 
-
+# Displays All Date For Students, Lecturers and Modules
 def view_all_data():
     print("\n")
     print("=" * 70)
@@ -244,7 +257,7 @@ def view_all_data():
     for lecturer in lecturers:
         print(f"- {lecturer[0]}: {lecturer[1]} ({lecturer[2]})")
 
-
+# Menu, Allows User To Choose
 def main():
     while True:
         print("=" * 32)
