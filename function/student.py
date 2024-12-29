@@ -174,6 +174,9 @@ def enroll():
     except KeyboardInterrupt :
         pass
 
+    except TypeError:
+        pass
+
 # View Grades
 def view_grade():
     try:
@@ -217,7 +220,7 @@ def view_grade():
             input("\nPress enter to continue")
 
         else:
-            print("No Module are avaible\n")
+            print("No grade are avaible\n")
             input("Press enter to continue")
 
     except KeyboardInterrupt:
@@ -365,27 +368,27 @@ def main():
 
             # View Module
             if choice == 1:
-                print("\n")
+                print("")
                 view_module()
 
             # Enroll to the module
             elif choice == 2:
-                print("\n")
+                print("")
                 enroll()
 
             # View Grade
             elif choice == 3:
-                print("\n")
+                print("")
                 view_grade()
 
             # View Student attendance
             elif choice == 4:
-                print("\n")
+                print("")
                 student_attendance()
 
             # Unenroll from the module
             elif choice == 5:
-                print("\n")
+                print("")
                 unenroll()
 
             #Exit 
@@ -397,7 +400,7 @@ def main():
             elif choice == False:
                 break
 
-            print("\n")
+            print("")
         
         except KeyboardInterrupt:
             pass

@@ -1,5 +1,2 @@
 TP078141,an,CS,SSCC
-tp000002,Aayan,CS
-tp000003,aAYAN,AENDFKIAFN
-tp000099,Aayan,Business
-TP024356,Johan,Agus
+TP748810,Richmond Deanlim,C omputer

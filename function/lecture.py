@@ -488,7 +488,7 @@ def view_student_grade(): #Function to view student grade
 
 
 #Function for user interaction and menu
-def lecturer_interface():
+def main():
     try:
         while True: #Mail loop to display the menu and process user input
             lecturer_menu()
@@ -519,4 +519,4 @@ def lecturer_interface():
                 break
     except KeyboardInterrupt:#In case user interrupts the program
         print("\nKeyboard Interrupt Error")
-lecturer_interface() #Call the Lecturer Interface Function to start the program
+

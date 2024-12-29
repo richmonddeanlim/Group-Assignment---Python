@@ -436,27 +436,27 @@ def main():
 
             # Open record menu
             if choice == 1:
-                print("\n")
+                print("")
                 fee_record()
 
             # View Outstanding fee
             elif choice == 2:
-                print("\n")
+                print("")
                 outstanding_fee()
 
             # Update payment information
             elif choice == 3:
-                print("\n")
+                print("")
                 update_fee()
 
             # Print receipt
             elif choice == 4:
-                print("\n")
+                print("")
                 receipt()
 
             # Viewing Financial Summary
             elif choice == 5:
-                print("\n")
+                print("")
                 financial_summary()
 
             #Exit 
@@ -467,7 +467,7 @@ def main():
             elif choice == False:
                 break
 
-            print("\n")
+            print("")
         
         except KeyboardInterrupt:
             pass

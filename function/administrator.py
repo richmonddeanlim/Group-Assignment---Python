@@ -12,7 +12,6 @@ def read(path):
 
 
 # File Paths
-main_file = "database/main.txt"
 s_path = "database/student.txt"
 l_path = "database/lecturer.txt"
 m_path = "database/module.txt"
@@ -21,7 +20,6 @@ m_path = "database/module.txt"
 students = read(s_path)
 modules = read(m_path)
 lecturers = read(l_path)
-big = read(main_file)
 
 # Updates All Files After Changes Have Been Made Such As Add/Delete So Files Any Synced
 def update_files():
@@ -29,7 +27,6 @@ def update_files():
     students = read(s_path)
     modules = read(m_path)
     lecturers = read(l_path)
-    big = read(main_file)
 
 # Adds A New Module
 def add_module():
@@ -71,9 +68,6 @@ def add_module():
     with open(m_path, 'a') as m_a:
         m_a.write(f"{M_code},{M_name},{M_credits}\n")
 
-    with open(main_file, 'a') as main_a:
-        main_a.write(f"{M_code}\n")
-
     print("Module Added Successfully!")
     update_files()
 
@@ -114,9 +108,6 @@ def add_student():
     with open(s_path, 'a') as s_a:
         s_a.write(f"{S_ID},{S_name},{Department}\n")
 
-    with open(main_file, 'a') as s_a:
-        s_a.write(f"{S_ID}\n")
-
     print("Student Added Successfully!")
     update_files()
 
@@ -142,9 +133,9 @@ def remove_function(file_path, identifier, entity_type):
 # Removes A Student
 def remove_student():
     print("\n")
-    print("=" * 70)
-    print(f"{'Student Deletion Information':^70}")
-    print("=" * 70)
+    print("=" * 85)
+    print(f"{'Student Deletion Information':^85}")
+    print("=" * 85)
     S_ID = input("Please enter student ID you want to remove (TP followed by 6 digits): ").strip().upper()
     remove_function(s_path, S_ID, "Student")
 
@@ -185,25 +176,22 @@ def add_lecturer():
     with open(l_path, 'a') as l_a:
         l_a.write(f"{L_ID},{L_name},{Module}\n")
 
-    with open(main_file, 'a') as main_a:
-        main_a.write(f"{L_ID}\n")
-
     print("Lecturer Added Successfully!")
     update_files()
 
 # Removes A Lecturer
 def remove_lecturer():
-    print("=" * 70)
-    print(f"{'Lecturer Deletion Information':^70}")
-    print("=" * 70)
+    print("=" * 85)
+    print(f"{'Lecturer Deletion Information':^85}")
+    print("=" * 85)
     L_ID = input("Please enter Lecturer ID you want to remove (L followed by 2 digits): ").strip().upper()
     remove_function(l_path, L_ID, "Lecturer")
 
 # Updates Lecturer Information
 def update_lecturer():
-    print("=" * 70)
-    print(f"{'Update Lecturer Information':^70}")
-    print("=" * 70)
+    print("=" * 85)
+    print(f"{'Update Lecturer Information':^85}")
+    print("=" * 85)
 
     L_ID = input("Please enter the Lecturer ID you want to update (L followed by 2 digits): ").strip().upper()
 
@@ -230,9 +218,9 @@ def update_lecturer():
 # Generates A Report On Students, Lecturers and Modules
 def generate_report():
     print("\n")
-    print("=" * 70)
-    print(f"{'Report Summary':^70}")
-    print("=" * 70)
+    print("=" * 50)
+    print(f"{'Report Summary':^50}")
+    print("=" * 50)
 
     print(f"Total number of students: {len(students)}")
     print(f"Total number of active courses: {len(modules)}")
@@ -241,9 +229,9 @@ def generate_report():
 # Displays All Date For Students, Lecturers and Modules
 def view_all_data():
     print("\n")
-    print("=" * 70)
-    print(f"{'All Data':^70}")
-    print("=" * 70)
+    print("=" * 60)
+    print(f"{'All Data':^60}")
+    print("=" * 60)
 
     print("Students:")
     for student in students:

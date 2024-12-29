@@ -1,3 +1,2 @@
-DTGIN,Digital Thinking,14
-SSCC,System Software and Computing Concepts,16
-CC2,Co Curriculum,12
+M002,Programming withg C,10
+M001,Python Programming,10
