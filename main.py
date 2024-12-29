@@ -59,3 +59,6 @@ try:
 
 except KeyboardInterrupt:
     pass
+
+except FileNotFoundError:
+    print("pls make sure you open from main directory")
