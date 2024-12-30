@@ -1,3 +1,20 @@
-TP078141,Olivia Davis,Introduction to Networking,IDN,70
-TP2,Bob Morgan,Digital Thinking and Innovation,DGTIN,100
-TP3,Rachel Thomas,Digital Thinking and Innovation,DGTIN,100
+TP078141,Muhamad Faizal,Cloud Computing,M010,70
+TP748810,Richmond Deanlim,Programming with C,M002,85
+TP091234,Samantha Lee,Python Programming,M001,90
+TP456789,Daniel Wong,Web Development,M005,75
+TP347890,Emily Tan,Data Structures,M003,80
+TP127890,Jonathan Lim,Algorithms,M004,88
+TP982341,Chloe Smith,Artificial Intelligence,M008,92
+TP762345,Aaron Davis,Machine Learning,M009,89
+TP345678,Grace Teh,Cloud Computing,M010,84
+TP874321,Brian Koh,Database Systems,M006,78
+TP643217,Michelle Ong,Principles of Management,M011,87
+TP582349,Linda Ng,Marketing Fundamentals,M012,82
+TP123487,Jason Chen,Financial Accounting,M013,88
+TP567894,Sophia Lau,Business Communication,M014,90
+TP879543,Michael Yap,Organizational Behavior,M015,85
+TP432198,Rachel Low,Economics for Business,M016,79
+TP912345,Kevin Tan,Human Resource Management,M017,91
+TP654789,Olivia Goh,Strategic Management,M018,86
+TP234567,Thomas Ng,Entrepreneurship,M019,88
+TP789123,Nicole Chia,Business Analytics,M020,93

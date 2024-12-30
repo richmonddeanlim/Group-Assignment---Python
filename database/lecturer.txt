@@ -1,6 +1,20 @@
-L19,Agustion,ComputingPypasdasd
-L21,Legion,BusniessKerasCheras
-L99,Leg,asd,avbk
-L66,Gus,Computing,sslp
-L88,gusmin,Computing,Kers,Momo
-L78,Gusmut,Kertass,Python Programming
+L19,Augustine Brown
+L21,Logan Smith
+L99,Liam Johnson
+L66,Gustav Anderson
+L88,Gus Miller
+L78,Gusman Rivera
+L45,August Taylor
+L22,Lenny Garcia
+L33,Gordon Williams
+L55,Luke Martinez
+L60,Augustin Davis
+L77,Gregory Wilson
+L44,Leo Clark
+L39,Gunnar Lewis
+L23,Lester Hall
+L89,Austin Young
+L11,Leon Moore
+L27,Grant Adams
+L36,Loren Scott
+L50,George Thomas

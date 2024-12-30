@@ -1,2 +1,20 @@
-TP078141,an,CS
-TP748810,Richmond Deanlim,C omputer
+TP078141,Muhamad Faizal,Computing
+TP748810,Richmond Deanlim,Computing
+TP091234,Samantha Lee,Computing
+TP456789,Daniel Wong,Computing
+TP347890,Emily Tan,Computing
+TP127890,Jonathan Lim,Computing
+TP982341,Chloe Smith,Computing
+TP762345,Aaron Davis,Computing
+TP345678,Grace Teh,Computing
+TP874321,Brian Koh,Computing
+TP643217,Michelle Ong,Business
+TP582349,Linda Ng,Business
+TP123487,Jason Chen,Business
+TP567894,Sophia Lau,Business
+TP879543,Michael Yap,Business
+TP432198,Rachel Low,Business
+TP912345,Kevin Tan,Business
+TP654789,Olivia Goh,Business
+TP234567,Thomas Ng,Business
+TP789123,Nicole Chia,Business

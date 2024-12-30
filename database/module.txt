@@ -1,2 +1,20 @@
-M002,Programming withg C,10
+M002,Programming with C,10
 M001,Python Programming,10
+M003,Data Structures,9
+M004,Algorithms,8
+M005,Web Development,10
+M006,Database Systems,9
+M007,Operating Systems,8
+M008,Artificial Intelligence,7
+M009,Machine Learning,8
+M010,Cloud Computing,10
+M011,Principles of Management,9
+M012,Marketing Fundamentals,8
+M013,Financial Accounting,10
+M014,Business Communication,7
+M015,Organizational Behavior,8
+M016,Economics for Business,9
+M017,Human Resource Management,10
+M018,Strategic Management,9
+M019,Entrepreneurship,8
+M020,Business Analytics,10
