@@ -272,7 +272,7 @@ def view_all_data():
 
     print("\nLecturers:")
     for lecturer in lecturers:
-        print(f"- {lecturer[0]}: {lecturer[1]} ({lecturer[2]})")
+        print(f"- {lecturer[0]}: {lecturer[1]}")
 
 # Menu, Allows User To Choose
 def main():

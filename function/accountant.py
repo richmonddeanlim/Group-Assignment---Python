@@ -27,7 +27,7 @@ def menu():
         while(True):
             try:
                 # Getting User Choice
-                choice = int(input("Choose your choices (1-5): "))
+                choice = int(input("Choose your choices (1-6): "))
                 # Validating user input
                 if choice in range(1,7):
                     # Returning value to the function

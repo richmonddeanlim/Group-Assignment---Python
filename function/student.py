@@ -16,7 +16,7 @@ def menu():
         while(True):
             try:
                 # Getting User Choice
-                choice = int(input("Choose your choices (1-5): "))
+                choice = int(input("Choose your choices (1-6): "))
                 # Validating user input
                 if choice in range(1,7):
                     # Returning value to the function
@@ -160,12 +160,12 @@ def enroll():
             with open(path_student,"w") as file:
                 file.writelines(data)
             
-            choice = input("enter 1 to continue: ")
+            choice = input("enter to continue (0 to stop): ")
 
-            if choice == 1:
-                continue
-            else:
+            if choice == "0":
                 break
+            else:
+                continue
 
 
     except FileNotFoundError:
@@ -345,12 +345,12 @@ def unenroll():
                 with open(path_student,"w") as file:
                     file.writelines(data)
                 
-                choice = input("enter 1 to continue: ")
+                choice = input("enter to continue (0 to stop): ")
 
-                if choice == "1":
-                    continue
-                else:
+                if choice == "0":
                     break
+                else:
+                    continue
 
         else:
             print("No Module are avaible")
