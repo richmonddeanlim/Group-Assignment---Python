@@ -170,14 +170,6 @@ def add_lecturer():
             break
 
     # Ensures Data Entered Meets The Correct Format
-    while True:
-        Department = input("Please enter Department name: ").strip()
-        if not Department.replace(" ", "").isalpha():
-            print("Invalid Department Name. Please enter a valid department name.")
-        else:
-            break
-
-    # Ensures Data Entered Meets The Correct Format
     registered_module = view_module()
     module_list = []
     while True:
@@ -195,7 +187,7 @@ def add_lecturer():
     data = []
     
     # inserting all data into list
-    for item in [L_ID,L_name,Department]:
+    for item in [L_ID,L_name]:
         data.append(item)
 
     for module in module_list:

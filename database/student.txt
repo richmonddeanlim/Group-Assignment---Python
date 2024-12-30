@@ -1,2 +1,2 @@
-TP078141,an,CS,SSCC
+TP078141,an,CS
 TP748810,Richmond Deanlim,C omputer

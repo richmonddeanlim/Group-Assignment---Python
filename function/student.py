@@ -270,7 +270,10 @@ def student_attendance():
     
     except KeyboardInterrupt:
         pass
-
+    
+    except IndexError:
+        print("This student did not have any record")
+        
 #Unenroll Function
 def unenroll():
     try:

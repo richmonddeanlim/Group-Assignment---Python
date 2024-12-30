@@ -148,6 +148,7 @@ def fee_record():
                             for Student in student_record:
                                 if (("TP" or "Tp" or "tp" in student_id) and len(student_id) == 8) and student_id == Student[0]:
                                     condition = True
+                                    student_name = Student[1]
                                     break
                                 else:
                                     condition = False
@@ -155,9 +156,6 @@ def fee_record():
                                 break
                             elif condition == False:      
                                 print("Tp is not found")
-
-
-                        student_name = input("Input Student name: ")
 
                         while True:
                             # Getting an input with value error handling
@@ -246,15 +244,15 @@ def update_fee():
         record_data = data_reading()
 
         # Print the record data
-        else_message ="No record data is found"
+        else_message = "No record data is found"
 
-        print_record(record_data,else_message)
+        print_record(record_data,else_message,"Fee Record")
 
         # Validating input
         while True:
             try:
                 update = int(input("Input the number of data that want to be update: "))
-                if update in range(1,len(record_data)):
+                if update in range(1,len(record_data)+1):
                     break
                 else:
                     print(f"There is no data on num {update}")
