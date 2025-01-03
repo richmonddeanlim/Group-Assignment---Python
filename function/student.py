@@ -215,7 +215,7 @@ def view_grade():
             num = 0
             for item in grade_list:
                 num += 1
-                print(f"{num:^4} {item[0]:<32} {item[1]:^12} {item[2]:^12}")
+                print(f"{num:^4} {item[0]:^32} {item[1]:^12} {item[2]:^12}")
             print("=" * 60)
             input("\nPress enter to continue")
 
