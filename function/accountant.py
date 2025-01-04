@@ -40,7 +40,7 @@ def menu():
             
     # Showing error display
     except KeyboardInterrupt:
-        print("\n\nExiting")
+        print("\nExiting\n")
         return False
 
 #File Path 
@@ -93,7 +93,7 @@ def print_record(record_data,else_message,title):
         input("Press enter to continue")
 
     except KeyboardInterrupt:
-        pass
+        print("\nExiting\n")
 
 # Fee record function
 def fee_record():
@@ -193,7 +193,7 @@ def fee_record():
 
                     # Clarify if any error occur
                     except KeyboardInterrupt:
-                        pass
+                        print("\nExiting\n")
                         break
                     except FileNotFoundError:
                         print("Make sure you run from the Group Assignment folder")
@@ -220,7 +220,7 @@ def fee_record():
                 print("That option is not available")
 
     except KeyboardInterrupt:
-        pass
+        print("\nExiting\n")
 
 # Outstanding Fee View Function
 def outstanding_fee():
@@ -235,7 +235,7 @@ def outstanding_fee():
         print_record(unpaid_record,else_message,"Outstanding Fee")
         
     except KeyboardInterrupt:
-        pass
+        print("\nExiting\n")
 
 # Update payment status
 def update_fee():
@@ -338,7 +338,7 @@ def update_fee():
         # Write the modified text 
 
     except KeyboardInterrupt:
-        pass
+        print("\nExiting\n")
 
 # Print Receipt
 def receipt():
@@ -395,7 +395,7 @@ def receipt():
         input("Press enter to continue")
     
     except KeyboardInterrupt:
-        pass
+        print("\nExiting\n")
 
 # View Financial Summary
 def financial_summary():
@@ -423,7 +423,7 @@ def financial_summary():
         input("Press enter to continue")
 
     except KeyboardInterrupt:
-        pass
+        print("\nExiting\n")
 
 # This is the main function program for Uni management system
 def main():
@@ -468,4 +468,4 @@ def main():
             print("")
         
         except KeyboardInterrupt:
-            pass
+            print("\nExiting\n")
