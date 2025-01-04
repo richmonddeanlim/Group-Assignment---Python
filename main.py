@@ -7,7 +7,7 @@ try:
     while True:
         # Creating program menu
         print("="*50)
-        print(f"{"University Management System":^50}")
+        print(f"{'University Management System':^50}")
         print("="*50)
         print("1.Administrator")
         print("2.Lecturer")
@@ -23,7 +23,7 @@ try:
                 function_choice = int(input("Input your option: "))
                 break
             except ValueError:
-                print("Pls Input an Interger")
+                print("Pls Input an Integer")
 
         # Calling admin main function
         if function_choice == 1:
@@ -42,7 +42,7 @@ try:
         
         # Calling registrant main function
         elif function_choice == 4:
-            # copy paste the main here
+            # copy and paste the main here
             pass
         
         # Calling Accountant main function 

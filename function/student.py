@@ -1,15 +1,15 @@
-# Diplaying student module
+# Displaying student module
 def menu():
     try:
         # Displaying menu for user
         print("=" * 32)
-        print(f"{"Student Menu":^32}")
+        print(f"{'Student Menu':^32}")
         print("=" * 32)
-        print("1.View Avaible Modules")
+        print("1.View Available Modules")
         print("2.Enrol in Module")
-        print("3.View Gradces")
-        print("4.Acess Attendance Record")
-        print("5.Unenroll from Module")
+        print("3.View Grades")
+        print("4.Access Attendance Record")
+        print("5.Unroll from Module")
         print("6.Exit")
         print("=" * 32)
 
@@ -61,15 +61,15 @@ def data_reading(path):
     except FileNotFoundError:
         print("pls open with the main file directory location")
 
-# View Avaible Module
-# the value return the avible module and student id index(0,1)
+# View Available Module
+# the value return the available module and student id index(0,1)
 def view_module():
     try:
         # getting all data from txt to the list
         module_record = data_reading(path_module)
         student_record = data_reading(path_student)
 
-        #Getting list for avaible module
+        #Getting list for available module
         # indexing 4 to above will show student module
         module_list = [(module[0],module[1]) for module in module_record]
 
@@ -83,12 +83,12 @@ def view_module():
                     break
                 else:
                     condition = False
-            if condition == True:
+            if condition:
                 break
-            elif condition == False:      
+            elif not condition:
                 print("Tp is not found")
 
-        # Cheking student have enrool or not [preventing duplicate data]
+        # Checking student have enrolled or not [preventing duplicate data]
         student_module = []
         for student in student_record:
             if student_id == student[0]:
@@ -99,26 +99,26 @@ def view_module():
                         student_module.append(student[i])
     
         # filtering the data only display the module that student haven't enroll
-        avaible_module = [module for module in module_list if module[0] not in student_module]
+        available_module = [module for module in module_list if module[0] not in student_module]
 
-        if avaible_module:
+        if available_module:
             # Print header
             print("=" * 60)
-            print(f"{"No":^4} {'Module ID':^12} {'Module Name':^12}")
+            print(f"{'No':^4} {'Module ID':^12} {'Module Name':^12}")
             print("=" * 60)
             # Print each data with format string ( using ^ to make center alignment)
             num = 0
-            for module in avaible_module:
+            for module in available_module:
                 num += 1
                 print(f"{num:^4} {module[0]:^12} {module[1]:^12}")
             print("=" * 60)
 
         else:
-            print("No Module are avaible")
+            print("No Module are available")
 
         input("\nPress enter to continue")
 
-        return avaible_module,student_id
+        return available_module,student_id
 
     
     except KeyboardInterrupt:
@@ -129,14 +129,14 @@ def enroll():
     try:
         # Getting data that returned by the function
         function_value = view_module()
-        avaible_module = function_value[0]
+        available_module = function_value[0]
         student_id = function_value[1]
         
         # Getting user input and getting validation
         while True:
             while True:
                 enroll_choice = input("Enter the module id to enroll: ")
-                if enroll_choice.upper() in [item[0] for item in avaible_module]:
+                if enroll_choice.upper() in [item[0] for item in available_module]:
                     break
                 else:
                     print("You input the wrong id")
@@ -175,7 +175,7 @@ def enroll():
         pass
 
     except TypeError:
-        pass # passing since the error only happen if i keyboard intterupt and no input
+        pass # passing since the error only happen if I keyboard interrupt and no input
 
 # View Grades
 def view_grade():
@@ -194,9 +194,9 @@ def view_grade():
                     break
                 else:
                     condition = False
-            if condition == True:
+            if condition:
                 break
-            elif condition == False:      
+            elif not condition:
                 print("Tp is not found")
 
         # Fetch the student module name and grade based on student id
@@ -209,7 +209,7 @@ def view_grade():
         if grade_list:
             # Print header
             print("=" * 60)
-            print(f"{"No":^4} {'Module Name':^32} {'Module ID':^12} {'Grade':^12}")
+            print(f"{'No':^4} {'Module Name':^32} {'Module ID':^12} {'Grade':^12}")
             print("=" * 60)
             # Print each data with format string ( using ^ to make center alignment)
             num = 0
@@ -220,7 +220,7 @@ def view_grade():
             input("\nPress enter to continue")
 
         else:
-            print("No grade are avaible\n")
+            print("No grade are available\n")
             input("Press enter to continue")
 
     except KeyboardInterrupt:
@@ -243,9 +243,9 @@ def student_attendance():
                         break
                     else:
                         condition = False
-                if condition == True:
+                if condition:
                     break
-                elif condition == False:      
+                elif not condition:
                     print("Tp is not found")
 
             # Fetch the student module name and grade based on student id
@@ -266,7 +266,7 @@ def student_attendance():
             input("Press enter to continue")
 
         elif attendance_list[0] > 0 and attendance_list[1] == 0:
-            print("Zero Devision Error")
+            print("Zero Division Error")
     
     except KeyboardInterrupt:
         pass
@@ -275,7 +275,7 @@ def student_attendance():
         print("This student did not have any record")
         
 #Unenroll Function
-def unenroll():
+def unroll():
     try:
         # Getting data that returned by the function
         student_record = data_reading(path_student)
@@ -290,29 +290,29 @@ def unenroll():
                     break
                 else:
                     condition = False
-            if condition == True:
+            if condition:
                 break
-            elif condition == False:      
+            elif not condition:
                 print("Tp is not found")
 
-        # Cheking student have enrool or not [preventing duplicate data]
-        unenroll_module = []
+        # Checking student have enrolled or not [preventing duplicate data]
+        unroll_module = []
         for student in student_record:
             if student_id == student[0]:
                 for i in range (3,len(student)):
                     if len(student) == 4:
-                        unenroll_module.append(student[3])
+                        unroll_module.append(student[3])
                     else: 
-                        unenroll_module.append(student[i])
+                        unroll_module.append(student[i])
 
-        if unenroll_module:
+        if unroll_module:
             # Print header
             print("=" * 30)
-            print(f"{"No":^4} {'Module ID':^12} ")
+            print(f"{'No':^4} {'Module ID':^12} ")
             print("=" * 30)
             # Print each data with format string ( using ^ to make center alignment)
             num = 0
-            for module_id in unenroll_module:
+            for module_id in unroll_module:
                 num += 1
                 print(f"{num:^4} {module_id:^12} ")
             print("=" * 30)
@@ -320,8 +320,8 @@ def unenroll():
             while True:
             # Getting user input and getting validation
                 while True:
-                    unenroll_choice = input("Enter the module id to unenroll: ")
-                    if unenroll_choice.upper() in [item for item in unenroll_module]:
+                    unroll_choice = input("Enter the module id to unroll: ")
+                    if unroll_choice.upper() in [item for item in unroll_module]:
                         break
                     else:
                         print("You input the wrong id")
@@ -339,7 +339,7 @@ def unenroll():
                         i += 1
 
                 # Replacing the line in certain index
-                data[i] = data[i].replace(str(f",{unenroll_choice}"), str(f""))
+                data[i] = data[i].replace(str(f",{unroll_choice}"), str(f""))
 
                 # Rewrite the updated file
                 with open(path_student,"w") as file:
@@ -353,7 +353,7 @@ def unenroll():
                     continue
 
         else:
-            print("No Module are avaible")
+            print("No Module are available")
             input("\nPress enter to continue")
             
     except FileNotFoundError:
@@ -389,10 +389,10 @@ def main():
                 print("")
                 student_attendance()
 
-            # Unenroll from the module
+            # Unroll from the module
             elif choice == 5:
                 print("")
-                unenroll()
+                unroll()
 
             #Exit 
             elif choice == 6:
@@ -400,7 +400,7 @@ def main():
                 break
 
             # When keyboard interrupt it will return False on the function menu()
-            elif choice == False:
+            elif not choice:
                 break
 
             print("")

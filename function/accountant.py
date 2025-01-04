@@ -12,9 +12,9 @@ except ModuleNotFoundError:
 # Creating menu for user to choose 
 def menu():
     try:
-        # Displaying menu for usern
+        # Displaying menu for user
         print("=" * 32)
-        print(f"{"Accountant Menu":^32}")
+        print(f"{'Accountant Menu':^32}")
         print("=" * 32)
         print("1.Tuition Fee Record")
         print("2.Outstanding Tuition Fee List")
@@ -79,7 +79,7 @@ def print_record(record_data,else_message,title):
                 # Print header
                 print(f"{title:^75}")
                 print("=" * 75)
-                print(f"{"No":^4} {'Date':^12} {'Student ID':^12} {'Name':^20} {'Fee_Amount':^12} {'Status':^10}")
+                print(f"{'No':^4} {'Date':^12} {'Student ID':^12} {'Name':^20} {'Fee_Amount':^12} {'Status':^10}")
                 print("=" * 75)
                 # Print each data with format string ( using ^ to make center alignment)
                 num = 0
@@ -100,7 +100,7 @@ def fee_record():
     try:
         # Giving the option
         print("=" * 30)
-        print(f"{"Fee record":^30}")
+        print(f"{'Fee record':^30}")
         print("=" * 30)
         print("1.View Record")
         print("2.Add Record")
@@ -133,12 +133,12 @@ def fee_record():
                             date = input("Input the date (dd-mm-yyyy): ")
 
                             try:
-                                # The datetime.strptime will returm boolean value
+                                # The datetime.strptime will return boolean value
                                 if bool(datetime.strptime(date, format)):
                                    break
 
                             except ValueError:
-                                print("Date format incorect")
+                                print("Date format incorrect")
                                 
 
                         while True:
@@ -152,9 +152,9 @@ def fee_record():
                                     break
                                 else:
                                     condition = False
-                            if condition == True:
+                            if condition:
                                 break
-                            elif condition == False:      
+                            elif not condition:
                                 print("Tp is not found")
 
                         while True:
@@ -266,7 +266,7 @@ def update_fee():
         # Change the payment status for the txt file
         print(" ")
         print("=" * 20)
-        print(f"{"Change option":^20}")
+        print(f"{'Change option':^20}")
         print("=" * 20)
         print("1.Total pay amount")
         print("2.Payment status")
@@ -351,7 +351,7 @@ def receipt():
         else_message = "No student have paid can't print receipt"
 
         # Print the available data to print the receipt
-        print_record(paid_data,else_message,"Avaible Reciept")
+        print_record(paid_data,else_message,"Available Receipt")
 
         # Validating input
         while True:
@@ -370,7 +370,7 @@ def receipt():
         print("\n")
         # Print the receipt
         print("=" * 30)
-        print(f"{"receipt":^30}")
+        print(f"{'receipt':^30}")
         print("=" * 30)
         print(f"Student ID   : {receipt_data[1]}")
         print(f"Student Name : {receipt_data[2]}")
@@ -383,7 +383,7 @@ def receipt():
         # Saving the receipt
         with open("receipt.txt", "w") as file :
             file.writelines("=" * 30)
-            file.writelines(f"\n{"receipt":^30}\n")
+            file.writelines(f"\n{'receipt':^30}\n")
             file.writelines("=" * 30)
             file.writelines(f"\nStudent ID   : {receipt_data[1]}")
             file.writelines(f"\nStudent Name : {receipt_data[2]}")
@@ -414,14 +414,14 @@ def financial_summary():
 
         #Print the Financial Summary
         print("=" * 30)
-        print(f"{"Financial Summary":^30}")
+        print(f"{'Financial Summary':^30}")
         print("=" * 30)
         print(f"Paid Fee   : {paid_fee}")
         print(f"Unpaid Fee : {unpaid_fee}")
         print("=" * 30)
         print(f"Total       : {total}")
         input("Press enter to continue")
-
+        print("")
     except KeyboardInterrupt:
         print("\nExiting\n")
 
@@ -462,7 +462,7 @@ def main():
                 break
 
             # When keyboard interrupt it will return False on the function
-            elif choice == False:
+            elif not choice:
                 break
 
             print("")
