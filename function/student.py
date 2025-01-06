@@ -78,7 +78,7 @@ def view_module():
             student_id = input("Input student id (TPxxxxxx): ").strip().upper()
             # Validating input
             for student in student_record:
-                if (("TP" or "Tp" or "tp" in student_id) and len(student_id) == 8) and student_id == student[0]:
+                if (student_id.startswith("TP") and len(student_id) == 8) and student_id == student[0]:
                     condition = True
                     break
                 else:
@@ -189,7 +189,7 @@ def view_grade():
             student_id = input("Input student id (TPxxxxxx): ").strip().upper()
             # Validating input
             for student in student_record:
-                if (("TP" or "Tp" or "tp" in student_id) and len(student_id) == 8) and student_id == student[0]:
+                if (student_id.startswith("TP") and len(student_id) == 8) and student_id == student[0]:
                     condition = True
                     break
                 else:
@@ -238,7 +238,7 @@ def student_attendance():
                 student_id = input("Input student id (TPxxxxxx): ").strip().upper()
                 # Validating input
                 for student in student_record:
-                    if (("TP" or "Tp" or "tp" in student_id) and len(student_id) == 8) and student_id == student[0]:
+                    if (student_id.startswith("TP") and len(student_id) == 8) and student_id == student[0]:
                         condition = True
                         break
                     else:
@@ -285,7 +285,7 @@ def unroll():
             student_id = input("Input student id (TPxxxxxx): ").strip().upper()
             # Validating input
             for student in student_record:
-                if (("TP" or "Tp" or "tp" in student_id) and len(student_id) == 8) and student_id == student[0]:
+                if (student_id.startswith("TP") and len(student_id) == 8) and student_id == student[0]:
                     condition = True
                     break
                 else:
