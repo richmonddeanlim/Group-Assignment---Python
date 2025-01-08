@@ -28,6 +28,39 @@ def update_files():
     modules = read(m_path)
     lecturers = read(l_path)
 
+    # code for lecturer to see module
+#open the name and module from txt provided by the administrator to the lecturer
+def view_modules():
+    print("---Search Lecturer---")
+
+    while True:
+        lecturer_code = input("Enter Lecturer Code: ").upper()
+        if lecturer_code.startswith('L'):
+            break
+        else:
+            print("Lecturer ID must start with L")
+
+    try:
+        with open(l_path, "r") as module: #opening lecturer lists
+            for line in module:
+                if line.startswith(lecturer_code): #getting value from every line of text file
+                    name = line.strip().split(",")[1:2]
+                    modules=line.strip().split(",")[2:]
+
+                    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+                    print("Your name: ",name[0])
+                    print("Your assigned modules: ")
+                    for subject in modules: #print every subject, use for loop because there might be more than one subject
+                        print("-",subject)
+                    input("Press any key to continue")
+                    return
+    except FileNotFoundError:
+        print("Lecturer data file is not found, please add the data")
+
+    print("Lecturer with that code is not found")
+    input("Press any key to continue")
+
+
 # Adds A New Module
 def add_module():
     print("\n")
@@ -165,6 +198,7 @@ def add_lecturer():
             break
 
     # Ensures Data Entered Meets The Correct Format
+    registered_module = view_module()
     module_list = []
     while True:
         module = input("Please enter Module name: ").strip()                             
