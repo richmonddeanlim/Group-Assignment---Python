@@ -1,14 +1,5 @@
 from datetime import datetime
 
-# Need to be like this because when running in diff directory it could cause module not found
-# so whenever running from this directory or in main directory will not cause module error
-try:
-    from function.student import data_reading as read
-    from function.student import path_student
-except ModuleNotFoundError:
-    from student import data_reading as read
-    from student import path_student
-
 # Creating menu for user to choose 
 def menu():
     try:
@@ -45,6 +36,31 @@ def menu():
 
 #File Path 
 path = "database/fee_record.txt"
+path_student = "database/student.txt"
+
+# Data Function (for validation)
+# Reading data and assign it to list and make it usable
+def read_student(path):
+    try:
+        # Making the txt file to variable
+        with open(path, "r") as file:
+            raw_data = file.readlines()
+
+        # Checking how much data inside the txt files
+        txt_data = len(raw_data)
+
+        # Cleaning the data and this is the record data
+        record_data = []
+
+        for x in range(0,txt_data):
+            usable_data = raw_data[x].replace("\n","").split(",")
+            # Change the data type to integer
+            record_data.append(usable_data)
+
+        return record_data
+    
+    except FileNotFoundError:
+        print("pls open with the main file directory location")
 
 # Data Function 
 # Reading data and assign it to list and make it usable
@@ -142,7 +158,7 @@ def fee_record():
                                 
 
                         while True:
-                            student_record = read(path_student)
+                            student_record = read_student(path_student)
                             student_id = input("Input student id (TPxxxxxx): ").strip().upper()
                             # Validating input
                             for Student in student_record:

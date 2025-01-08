@@ -1,8 +1,3 @@
-try:
-    from function.lecture import module_list as view_module
-except ModuleNotFoundError:
-    from lecture import view_module
-
 # Read Data From A File And Return It As Lists, If The File Doesn't Exist If Creates One And Returns It
 def read(path):
     try:
@@ -170,7 +165,6 @@ def add_lecturer():
             break
 
     # Ensures Data Entered Meets The Correct Format
-    registered_module = view_module()
     module_list = []
     while True:
         module = input("Please enter Module name: ").strip()                             
