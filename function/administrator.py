@@ -198,7 +198,7 @@ def add_lecturer():
             break
 
     # Ensures Data Entered Meets The Correct Format
-    registered_module = view_module()
+    registered_module = view_modules()
     module_list = []
     while True:
         module = input("Please enter Module name: ").strip()                             

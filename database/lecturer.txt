@@ -1,4 +1,4 @@
-L19,Augustine Brown
+L19,Leonardo,Computing
 L21,Logan Smith
 L99,Liam Johnson
 L66,Gustav Anderson
