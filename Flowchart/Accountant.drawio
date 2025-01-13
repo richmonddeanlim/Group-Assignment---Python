@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2">
   <diagram name="Page-1" id="mqJQ5c2kNA3ZxZKOHx-5">
-    <mxGraphModel dx="1826" dy="956" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1461" dy="765" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -238,8 +238,10 @@
         <mxCell id="vL_mrk9jbiOzZaBhHcuc-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="vL_mrk9jbiOzZaBhHcuc-12" target="vL_mrk9jbiOzZaBhHcuc-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="vL_mrk9jbiOzZaBhHcuc-37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="vL_mrk9jbiOzZaBhHcuc-12" target="vL_mrk9jbiOzZaBhHcuc-36" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="vL_mrk9jbiOzZaBhHcuc-37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="vL_mrk9jbiOzZaBhHcuc-12" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="374.6700000000001" y="1919" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="vL_mrk9jbiOzZaBhHcuc-12" value="option == 3" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="173.67000000000002" y="1879" width="80" height="80" as="geometry" />
@@ -274,17 +276,13 @@
         <mxCell id="vL_mrk9jbiOzZaBhHcuc-29" value="Display the data from &lt;br&gt;record_data" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
           <mxGeometry x="491.67" y="1619" width="186" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="vL_mrk9jbiOzZaBhHcuc-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="vL_mrk9jbiOzZaBhHcuc-31" target="vL_mrk9jbiOzZaBhHcuc-33" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="vL_mrk9jbiOzZaBhHcuc-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="vL_mrk9jbiOzZaBhHcuc-31" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="498.3000000000002" y="1772.9411764705883" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="vL_mrk9jbiOzZaBhHcuc-31" value="input date, student_id, student_name,&lt;div&gt;fee_amount, fee status,&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
           <mxGeometry x="294.67" y="1743" width="167" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="vL_mrk9jbiOzZaBhHcuc-33" value="add the variable data to txt file" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="498.3" y="1743" width="143" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="vL_mrk9jbiOzZaBhHcuc-36" value="Rewrite all data in txt file into no string" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="374.67" y="1889" width="162" height="60" as="geometry" />
         </mxCell>
         <mxCell id="vL_mrk9jbiOzZaBhHcuc-38" value="return" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="165.17000000000002" y="2119" width="97" height="40" as="geometry" />
@@ -334,15 +332,15 @@
             <mxPoint x="504.67" y="1650" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="vL_mrk9jbiOzZaBhHcuc-56" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="vL_mrk9jbiOzZaBhHcuc-33" edge="1">
+        <mxCell id="vL_mrk9jbiOzZaBhHcuc-56" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="454.67" y="1920" as="sourcePoint" />
+            <mxPoint x="641.3000000000002" y="1772.9999999999995" as="sourcePoint" />
             <mxPoint x="704.67" y="1773" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="vL_mrk9jbiOzZaBhHcuc-57" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="vL_mrk9jbiOzZaBhHcuc-36" edge="1">
+        <mxCell id="vL_mrk9jbiOzZaBhHcuc-57" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="454.67" y="1920" as="sourcePoint" />
+            <mxPoint x="536.6700000000001" y="1919" as="sourcePoint" />
             <mxPoint x="704.67" y="1920" as="targetPoint" />
           </mxGeometry>
         </mxCell>
@@ -654,17 +652,18 @@
         <mxCell id="vL_mrk9jbiOzZaBhHcuc-156" value="Input choice to print" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;verticalAlign=top;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="276.56" y="5427" width="154.04" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="vL_mrk9jbiOzZaBhHcuc-162" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="vL_mrk9jbiOzZaBhHcuc-159" target="vL_mrk9jbiOzZaBhHcuc-161" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="vL_mrk9jbiOzZaBhHcuc-162" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="vL_mrk9jbiOzZaBhHcuc-159" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="353.58823529411757" y="5577" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="vL_mrk9jbiOzZaBhHcuc-159" value="Display choosen reciept to print" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;verticalAlign=top;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="294" y="5497" width="120" height="37.5" as="geometry" />
         </mxCell>
-        <mxCell id="vL_mrk9jbiOzZaBhHcuc-164" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="vL_mrk9jbiOzZaBhHcuc-161" target="vL_mrk9jbiOzZaBhHcuc-163" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="vL_mrk9jbiOzZaBhHcuc-161" value="Write the recipt to txt file" style="whiteSpace=wrap;html=1;verticalAlign=top;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="293.58" y="5577" width="120" height="43.75" as="geometry" />
+        <mxCell id="vL_mrk9jbiOzZaBhHcuc-164" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" target="vL_mrk9jbiOzZaBhHcuc-163" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="353.58823529411757" y="5620.75" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="vL_mrk9jbiOzZaBhHcuc-163" value="&lt;br&gt;Return" style="ellipse;whiteSpace=wrap;html=1;verticalAlign=top;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="304.16999999999996" y="5657" width="98.38" height="45.63" as="geometry" />
@@ -861,19 +860,19 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="BCBkM3_miuNvYFBybtpC-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BCBkM3_miuNvYFBybtpC-1" target="BCBkM3_miuNvYFBybtpC-4">
+        <mxCell id="BCBkM3_miuNvYFBybtpC-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="BCBkM3_miuNvYFBybtpC-1" target="BCBkM3_miuNvYFBybtpC-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="BCBkM3_miuNvYFBybtpC-1" value="paid_sum = sum all data in paid record" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="BCBkM3_miuNvYFBybtpC-1" value="paid_sum = sum all data in paid record" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="352.5" y="6555" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="BCBkM3_miuNvYFBybtpC-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BCBkM3_miuNvYFBybtpC-4" target="vL_mrk9jbiOzZaBhHcuc-198">
+        <mxCell id="BCBkM3_miuNvYFBybtpC-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="BCBkM3_miuNvYFBybtpC-4" target="vL_mrk9jbiOzZaBhHcuc-198" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="BCBkM3_miuNvYFBybtpC-4" value="unpaid_sum = sum all data in unpaid record" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="BCBkM3_miuNvYFBybtpC-4" value="unpaid_sum = sum all data in unpaid record" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="351.67" y="6635" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="BCBkM3_miuNvYFBybtpC-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.179;exitY=0.657;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="vL_mrk9jbiOzZaBhHcuc-187" target="BCBkM3_miuNvYFBybtpC-1">
+        <mxCell id="BCBkM3_miuNvYFBybtpC-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.179;exitY=0.657;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" parent="1" source="vL_mrk9jbiOzZaBhHcuc-187" target="BCBkM3_miuNvYFBybtpC-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="349.67" y="6405" as="sourcePoint" />
             <mxPoint x="351.67" y="6585" as="targetPoint" />
@@ -883,8 +882,17 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="BCBkM3_miuNvYFBybtpC-9" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="BCBkM3_miuNvYFBybtpC-9" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="307.84000000000003" y="6405" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="724Ln-Q-seEAXXYsd6Rl-1" value="Rewrite all data in &lt;br&gt;txt file into no string" style="shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="377.17" y="1888.5" width="172.83" height="61" as="geometry" />
+        </mxCell>
+        <mxCell id="724Ln-Q-seEAXXYsd6Rl-2" value="add the variable data to&lt;br&gt;txt file" style="shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="497.01" y="1743" width="175.33" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="724Ln-Q-seEAXXYsd6Rl-3" value="Write the recipt to txt file" style="shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="265.44" y="5580" width="181.11" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

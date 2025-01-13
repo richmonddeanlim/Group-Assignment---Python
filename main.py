@@ -2,6 +2,7 @@ from function import accountant
 from function import student
 from function import lecture
 from function import administrator
+from function import registrar
 
 try:
     while True:
@@ -42,8 +43,7 @@ try:
         
         # Calling registrant main function
         elif function_choice == 4:
-            # copy and paste the main here
-            pass
+            registrar.main()
         
         # Calling Accountant main function 
         elif function_choice == 5:
